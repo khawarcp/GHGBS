@@ -1,0 +1,65 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "page_width": "medium"
+      }
+    },
+    "9f5d62c6-2b64-46ba-9f13-5bc6d6a0645b": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16026506985645__9f5d62c6-2b64-46ba-9f13-5bc6d6a0645b-1675358533750e6a3c-0": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_5587.heic",
+            "tab_label": "",
+            "subheading": "",
+            "title": "Our Story",
+            "content": "<p>SquidHaus was created by myself, Lukas Pakter, and my cousin, Troy Parrott. Both being entrepreneurs and fitness fanatics, we had fitness brands of our own when we decided to merge our businesses and create one shared remarkable brand, SquidHaus. Shortly after, we brought on our first employee, Grant. He loved our brand so much that he offered to work for free just to show his value. Talk about commitment. Building a business, especially one you are extremely passionate about, is one of the most enjoyable experiences you can imagine. We started selling shorts to our friends in college and now are worn by some of the biggest names in the fitness influencers space. We also are loved by athletes in almost every professional sport including Football, Basketball, Soccer, MMA, and many others. <\/p><p>We don't believe in much of the nonsense spoken in today's society. Our values are simple: work extremely hard, be a good person, take risks, have fun and fail often. Our hope is to inspire others to become entrepreneurs and create a culture revolving around the relentless pursuit of self improvement and success.<\/p>",
+            "button_text": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16026506985645__9f5d62c6-2b64-46ba-9f13-5bc6d6a0645b-1675358533750e6a3c-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "left",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "43de7f12-b200-468a-9fe3-f1bda2ffe198": {
+      "type": "newsletter",
+      "settings": {
+        "reveal_on_scroll": true,
+        "image": "shopify:\/\/shop_images\/IMG_0029_2.jpg",
+        "subheading": "Subscribe to our newsletter",
+        "content": "<p>Exclusive releases, early access, and special promotions straight to your inbox<\/p>",
+        "text_position": "center",
+        "text_alignment": "center",
+        "text_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "9f5d62c6-2b64-46ba-9f13-5bc6d6a0645b",
+    "43de7f12-b200-468a-9fe3-f1bda2ffe198"
+  ]
+}

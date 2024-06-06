@@ -1,0 +1,99 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "page_width": "medium"
+      }
+    },
+    "b92609f3-5171-4a26-91c4-ead5436a2481": {
+      "type": "faq",
+      "blocks": {
+        "template--16169632989357__b92609f3-5171-4a26-91c4-ead5436a2481-category-1": {
+          "type": "category",
+          "settings": {
+            "title": "Shipping"
+          }
+        },
+        "template--16169632989357__b92609f3-5171-4a26-91c4-ead5436a2481-question-1": {
+          "type": "question",
+          "settings": {
+            "title": "Do you ship overseas?",
+            "answer": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.<\/p>"
+          }
+        },
+        "template--16169632989357__b92609f3-5171-4a26-91c4-ead5436a2481-question-2": {
+          "type": "question",
+          "settings": {
+            "title": "How long will it take to get my order?",
+            "answer": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.<\/p>"
+          }
+        },
+        "template--16169632989357__b92609f3-5171-4a26-91c4-ead5436a2481-category-2": {
+          "type": "category",
+          "settings": {
+            "title": "Other"
+          }
+        },
+        "template--16169632989357__b92609f3-5171-4a26-91c4-ead5436a2481-question-3": {
+          "type": "question",
+          "settings": {
+            "title": "Exchanges\/Returns",
+            "answer": "<p>We offer full refunds and exchanges for other variations of the product you'd like to return. <\/p><p>Our cutoff for the return process is 14 days following the day your package was delivered. The products must not be tampered with and the tag must still be on.<\/p><p>To start a return or exchange, please email us at Support@squidhaus.us with your order number and any other details that may help us facilitate your exchange\/return.<\/p>"
+          }
+        },
+        "f6652209-6e39-4494-a9e5-fd530c135739": {
+          "type": "question",
+          "settings": {
+            "title": "SquidHaus Transformation Promise",
+            "answer": "<p>SquidHaus is the only athletic apparel brand that actually wants to see you succeed. If you need to exchange an item due to a change in size resulting from a fitness achievement, we've got you covered.<\/p><p>1. Email support@squidhaus.us with your order number and progress pictures <\/p><p>2. Ship your old item to us and provide the tracking number<\/p><p>3. Once it arrives we will send you a brand new item in the size you need<\/p><p>Requirements <\/p><p>- Visible change in physique aligning with progress <\/p><p>- 3 months post purchase<\/p><p>- 1 product per customer<\/p><p>Post exchange - We'd love to showcase your amazing achievement on our page, so we'd greatly appreciate any gym or mirror pics in your new exchanged item. <br\/><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16169632989357__b92609f3-5171-4a26-91c4-ead5436a2481-category-1",
+        "template--16169632989357__b92609f3-5171-4a26-91c4-ead5436a2481-question-1",
+        "template--16169632989357__b92609f3-5171-4a26-91c4-ead5436a2481-question-2",
+        "template--16169632989357__b92609f3-5171-4a26-91c4-ead5436a2481-category-2",
+        "template--16169632989357__b92609f3-5171-4a26-91c4-ead5436a2481-question-3",
+        "f6652209-6e39-4494-a9e5-fd530c135739"
+      ],
+      "settings": {
+        "show_navigation": false,
+        "title": "",
+        "content": "",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "3ed67cc9-476a-4265-9415-33b0ca5481a6": {
+          "type": "question",
+          "disabled": true,
+          "settings": {
+            "title": "About your shop",
+            "answer": "<p>Write content to help your customers to better understand your products or policies.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "3ed67cc9-476a-4265-9415-33b0ca5481a6"
+      ],
+      "settings": {
+        "show_navigation": true,
+        "title": "",
+        "content": "",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "b92609f3-5171-4a26-91c4-ead5436a2481",
+    "faq"
+  ]
+}

@@ -1,0 +1,375 @@
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "b675d5db-7ab5-4d55-85f3-d36ae57f8cca": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/A56A9032.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/A56A9360.jpg",
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "",
+            "button_1_text": "Shop Shorts",
+            "button_1_link": "shopify:\/\/collections\/home-view-shorts",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#4c4c59",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "b675d5db-7ab5-4d55-85f3-d36ae57f8cca"
+      ],
+      "settings": {
+        "section_height": "large",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
+    "d57b04c5-7ab6-4eab-b502-02003d279876": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_biGekx": {
+          "type": "collection",
+          "settings": {
+            "collection": "best-sellers",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_biGekx"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "Best Sellers",
+        "content": "",
+        "products_count": 8,
+        "products_per_row": 4,
+        "stack_products": true,
+        "show_cta": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "#033814",
+        "button_text_color": "#dc1212"
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial-1": {
+          "type": "testimonial",
+          "settings": {
+            "content": "\"most comfortable pair of shorts I've owned by far. Got them for Christmas. amazing gift\"",
+            "author": "Chris G."
+          }
+        },
+        "bd075e5c-6dda-4ddb-9b67-edff2eaed3a3": {
+          "type": "testimonial",
+          "settings": {
+            "content": "\"First ordered from you guys back in September and every time there is a new release, I've been more and more pleased. Keep it up.\"",
+            "author": "Sean N."
+          }
+        },
+        "testimonial_tVRKXY": {
+          "type": "testimonial",
+          "settings": {
+            "content": "\"Ordered a pair of the Navy Blue Mesh shorts and got the black pair arrived, but when I reached out over email, the customer support team was super helpful and sent me 2 new pairs for free\"",
+            "author": "John S."
+          }
+        },
+        "ec615f90-d3c6-41ba-87ba-76180b060fa7": {
+          "type": "testimonial",
+          "settings": {
+            "content": "“Shorts fit me perfectly. I have big quads so it’s hard to find a pair that I enjoy this much.”",
+            "author": "Karim M."
+          }
+        },
+        "41fa3242-4e27-4419-8c59-2a8b2fda128a": {
+          "type": "testimonial",
+          "settings": {
+            "content": "\"The customer service at SquidHaus is top-notch. They let me exchange my shorts for a better size with zero hassle and I appreciate that.\"",
+            "author": "Brett B."
+          }
+        }
+      },
+      "block_order": [
+        "testimonial-1",
+        "bd075e5c-6dda-4ddb-9b67-edff2eaed3a3",
+        "testimonial_tVRKXY",
+        "ec615f90-d3c6-41ba-87ba-76180b060fa7",
+        "41fa3242-4e27-4419-8c59-2a8b2fda128a"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "subheading": "",
+        "title": "",
+        "background": "#f5f5f5",
+        "text_color": "#322949"
+      }
+    },
+    "featured_collections_XUm34Y": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_iizcEj": {
+          "type": "collection",
+          "settings": {
+            "collection": "tops",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "collection_gmhkUT": {
+          "type": "collection",
+          "settings": {
+            "collection": "nylon-shorts",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "collection_TL79Wm": {
+          "type": "collection",
+          "settings": {
+            "collection": "mesh-shorts",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "collection_nPFHdQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "hats",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "collection_E4yqxb": {
+          "type": "collection",
+          "settings": {
+            "collection": "sweats",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_iizcEj",
+        "collection_gmhkUT",
+        "collection_TL79Wm",
+        "collection_nPFHdQ",
+        "collection_E4yqxb"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "Featured Collections",
+        "content": "",
+        "products_count": 50,
+        "products_per_row": 4,
+        "stack_products": true,
+        "show_cta": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "image_with_text_BL6JHX": {
+      "type": "image-with-text",
+      "blocks": {
+        "item_VNckTp": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_00186.jpg",
+            "tab_label": "Item",
+            "subheading": "",
+            "title": "Squidhaus Signature Premium Tank tops",
+            "content": "<p>Check out our 95% cotton \/ 5% spandex tank tops that will last you months and maximize the look of your physique. You put the hard work in, it's time to show it off.<\/p>",
+            "button_text": "Shop now",
+            "button_link": "shopify:\/\/collections\/tank-tops"
+          }
+        }
+      },
+      "block_order": [
+        "item_VNckTp"
+      ],
+      "settings": {
+        "reveal_on_scroll": true,
+        "background_type": "full_width",
+        "background_overlap": "image",
+        "image_position": "left",
+        "text_alignment": "center",
+        "cycle_speed": 8,
+        "accent_background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
+      }
+    },
+    "add09f89-99bf-4547-8620-3c9f5facdcc7": {
+      "type": "shop-the-look",
+      "settings": {
+        "reveal_on_scroll": true,
+        "label": "Shop the looks"
+      }
+    },
+    "69033ca5-a97f-4eb3-bf90-6da8107babb1": {
+      "type": "slideshow",
+      "settings": {
+        "section_height": "auto",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
+    "066284b7-dd5f-48ea-a839-b0507d0baabb": {
+      "type": "slideshow",
+      "blocks": {
+        "image_y8nFhD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/4w2a0400.jpg",
+            "split_image": "shopify:\/\/shop_images\/4w2a0357-2.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/4w2a0400.jpg",
+            "text_position": "middle_center",
+            "subheading": "",
+            "title": "Quality meets style",
+            "button_1_text": "Shop now",
+            "button_1_link": "shopify:\/\/collections\/home-view-shorts",
+            "button_2_text": "",
+            "button_2_link": "",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "image_y8nFhD"
+      ],
+      "settings": {
+        "section_height": "auto",
+        "transition_type": "sweep",
+        "autoplay": true,
+        "cycle_speed": 5,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
+    "b7c54d7e-03de-49a1-b3ba-6b5d723e79dc": {
+      "type": "slideshow",
+      "settings": {
+        "section_height": "auto",
+        "transition_type": "sweep",
+        "autoplay": false,
+        "cycle_speed": 6,
+        "background": "rgba(0,0,0,0)"
+      }
+    },
+    "5671b2b5-4bdf-45f4-ab68-078ff2774813": {
+      "type": "shop-the-look",
+      "blocks": {
+        "template--16026506854573__5671b2b5-4bdf-45f4-ab68-078ff2774813-167663249458d5972e-0": {
+          "type": "look",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yoooo.jpg",
+            "dot_type": "inverted",
+            "product_1": "",
+            "product_1_horizontal_position": 41,
+            "product_1_vertical_position": 41,
+            "product_1_horizontal_position_mobile": 30,
+            "product_1_vertical_position_mobile": 30,
+            "product_2": "",
+            "product_2_horizontal_position": 46,
+            "product_2_vertical_position": 64,
+            "product_2_horizontal_position_mobile": 50,
+            "product_2_vertical_position_mobile": 50,
+            "product_3": "",
+            "product_3_horizontal_position": 62,
+            "product_3_vertical_position": 50,
+            "product_3_horizontal_position_mobile": 70,
+            "product_3_vertical_position_mobile": 70
+          }
+        }
+      },
+      "block_order": [
+        "template--16026506854573__5671b2b5-4bdf-45f4-ab68-078ff2774813-167663249458d5972e-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "reveal_on_scroll": true,
+        "label": "Shop the looks"
+      }
+    },
+    "text-with-icons": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item-1": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-box",
+            "custom_icon_width": 50,
+            "title": "Free shipping on U.S. orders $200+",
+            "content": "<p>Free shipping on all orders when you spend more than $200+ | Full refunds and exchanges available if not 100% satisfied<\/p>"
+          }
+        },
+        "item-2": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-phone",
+            "custom_icon_width": 50,
+            "title": "Customer service",
+            "content": "<p>While SquidHaus is run by a small team, customer service is our utmost priority and we will try our best to answer any question(s) you may have, even if its during the weekend!<\/p>"
+          }
+        },
+        "item-4": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-email",
+            "custom_icon_width": 50,
+            "title": "Contact us",
+            "content": "<p>Need to contact us ? Just send us an e-mail at Support@squidhaus.us<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "item-1",
+        "item-2",
+        "item-4"
+      ],
+      "settings": {
+        "background": "#211e1e",
+        "text_color": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "d57b04c5-7ab6-4eab-b502-02003d279876",
+    "testimonials",
+    "featured_collections_XUm34Y",
+    "image_with_text_BL6JHX",
+    "add09f89-99bf-4547-8620-3c9f5facdcc7",
+    "69033ca5-a97f-4eb3-bf90-6da8107babb1",
+    "066284b7-dd5f-48ea-a839-b0507d0baabb",
+    "b7c54d7e-03de-49a1-b3ba-6b5d723e79dc",
+    "5671b2b5-4bdf-45f4-ab68-078ff2774813",
+    "text-with-icons"
+  ]
+}
