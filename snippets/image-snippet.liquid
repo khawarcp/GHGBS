@@ -1,0 +1,14 @@
+{% if image != blank %}
+    <img src="{{ image | image_url }}" 
+    {% if alt %}
+        alt="{{ alt }}"
+        {% else %}
+        alt="{{ image.alt }}"             
+    {% endif %}
+    {% if lazyload %} loading="{{ lazyload }}"{% endif %} 
+        width="{{ image.width }}" 
+        height="{{ image.height }}"     
+     {% if class %} class="{{ class }}" {% endif %}>
+{% else %}
+    {{ 'image' | placeholder_svg_tag }}
+{% endif %}

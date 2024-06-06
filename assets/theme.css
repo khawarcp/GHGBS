@@ -1378,14 +1378,14 @@ p a:not(.button), .rte a:not(.button), .link {
   margin-block-end: 72px;
 }
 
-.page-content, .shopify-policy__body {
+.page-content {
   max-width: 1200px;
   margin-block-end: min(var(--vertical-breather), 80px);
   margin-inline-start: auto;
   margin-inline-end: auto;
 }
 
-.page-content--medium, .shopify-policy__body {
+.page-content--medium {
   max-width: 670px;
 }
 

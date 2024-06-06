@@ -69,9 +69,28 @@ NOTE TO DEVELOPERS: welcome to Focal theme! We hope that you will enjoy editing 
 
     <link rel="stylesheet" href="{{ 'theme.css' | asset_url }}">
 
+
+    {% comment %} custom styling {% endcomment %}
+    <!-- owl carosel -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="{{ "all.css" |  asset_url }}">
+    <link rel="stylesheet" href="{{ "responsive.css" |  asset_url }}">
+    <link rel="stylesheet" href="{{ "custom-styling.css" |  asset_url }}">
+    {% comment %} custom styling end {% endcomment %}
+
     <script src="{{ 'vendor.js' | asset_url }}" defer></script>
     <script src="{{ 'theme.js' | asset_url }}" defer></script>
+
+    <!-- jquery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" defer></script>
+    <!-- owl carosel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" defer></script>
     <script src="{{ 'custom.js' | asset_url }}" defer></script>
+
+
 
     {{ content_for_header }}
   </head>

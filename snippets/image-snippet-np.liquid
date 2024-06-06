@@ -1,0 +1,18 @@
+{% if image != blank %}
+    <img 
+        {% if imageURL %}            
+            src="{{ image | image_url }}"                   
+        {% endif %}
+        {% if assetURL %}            
+            src="{{ image | asset_url }}"                   
+        {% endif %}                    
+    {% if alt %}
+        alt="{{ alt }}"
+        {% else %}
+        alt="{{ image.alt }}"             
+    {% endif %}
+    {% if lazyload %} loading="{{ lazyload }}"{% endif %} 
+        width="{{ image.width }}" 
+        height="{{ image.height }}"     
+     {% if class %} class="{{ class }}" {% endif %}>
+{% endif %}

@@ -8,7 +8,7 @@
         "message-1": {
           "type": "message",
           "settings": {
-            "text": "Free shipping in U.S. on orders $200+",
+            "text": "Free ground shipping on parts and burr retail orders over $150 (excludes wholesale orders) - Use code FREEGROUND",
             "learn_more_text": "Learn more",
             "title": "",
             "content": "",
@@ -33,16 +33,47 @@
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "mega_menu_GnbqBA": {
+          "type": "mega_menu",
+          "settings": {
+            "menu_item": "Shop",
+            "images_position": "right",
+            "image_1": "shopify:\/\/shop_images\/mega-menu-color-logo-h292px.svg",
+            "image_1_heading": "",
+            "image_1_text": "",
+            "image_1_link": "",
+            "image_2_heading": "",
+            "image_2_text": "",
+            "image_2_link": "",
+            "image_3_heading": "",
+            "image_3_text": "",
+            "image_3_link": "",
+            "image_4_heading": "",
+            "image_4_text": "",
+            "image_4_link": "",
+            "image_5_heading": "",
+            "image_5_text": "",
+            "image_5_link": "",
+            "image_6_heading": "",
+            "image_6_text": "",
+            "image_6_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "mega_menu_GnbqBA"
+      ],
       "settings": {
         "enable_sticky_header": true,
-        "logo": "shopify:\/\/shop_images\/Squidhaus_trademark_update_3.jpg",
-        "logo_max_width": 235,
-        "mobile_logo_max_width": 135,
+        "logo": "shopify:\/\/shop_images\/Logo.png",
+        "logo_max_width": 110,
+        "mobile_logo_max_width": 100,
         "navigation_menu": "main-menu",
         "sidebar_navigation_menu": "",
         "header_layout": "logo_left_navigation_center",
-        "show_icons": false,
-        "reduce_desktop_padding": false,
+        "show_icons": true,
+        "reduce_desktop_padding": true,
         "show_locale_selector": true,
         "show_country_selector": false,
         "enable_transparent_header": false,

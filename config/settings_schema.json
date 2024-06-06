@@ -82,6 +82,16 @@
     ]
   },
   {
+    "name": "Banner Logo",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "banner_logo",
+        "label": "Banner Logo"
+    }
+    ]
+  },
+  {
     "name": "Colors",
     "settings": [
       {
