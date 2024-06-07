@@ -74,8 +74,8 @@
       "we_accept": "We accept"
     },
     "newsletter": {
-      "email": "Your e-mail",
-      "submit": "Register",
+      "email": "Email Address",
+      "submit": "Subscribe",
       "success": "You have been registered to our newsletter."
     },
     "cookie_bar": {

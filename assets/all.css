@@ -137,12 +137,6 @@ img {
     margin: 0;
 }
 
-.container {
-    width: 100%;
-    max-width: 1320px;
-    margin: 0 auto;
-}
-
 .flex {
     display: flex;
 }
@@ -1514,7 +1508,7 @@ footer#footer {
     opacity: 0.7;
 }
 
-.footer-news input#news-mail {
+.footer-news input[type=email] {
     width: 100%;
     max-width: 100%;
     border-radius: 8px;
@@ -1641,6 +1635,7 @@ footer#footer {
     margin-left: 50px;
 }
 
+.footer__aside,
 .footer-right {
     padding: 40px 0 31px 0;
 }

@@ -1,3 +1,39 @@
 .banner-logo {
     z-index: 0;
 }
+
+cart-drawer#mini-cart,
+predictive-search-drawer#search-drawer {
+    padding: 0 20px;
+}
+
+.banner--success {
+    margin-top: 10px;
+}
+
+.footer-news .banner--success p {
+    color: rgb(var(--success-color));
+}
+
+.footer__aside {
+    margin-block-start: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.social-media__item {
+    box-shadow: unset;
+    border: 1px solid var(--8DB1B5, #8DB1B5);
+}
+
+.social-media {
+    gap: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+    store-header .container {
+        padding: 0;
+    }
+    .header__secondary-links {
+        max-width: max-content;
+    }
+}

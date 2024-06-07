@@ -2169,8 +2169,8 @@ p a:not(.button), .rte a:not(.button), .link {
 
 @media screen and (min-width: 741px) {
   .social-media__link {
-    width: 55px;
-    height: 55px;
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -7865,7 +7865,7 @@ input:checked + .popover__choice-label:is(:lang(ae), :lang(ar), :lang(arc), :lan
 
 @media screen and (min-width: 741px) {
   .header__wrapper {
-    padding: calc(27px - var(--reduce-header-padding) * 6px) 0;
+    padding: calc(0 - var(--reduce-header-padding) * 6px) 0;
   }
 }
 
@@ -7960,16 +7960,16 @@ input:checked + .popover__choice-label:is(:lang(ae), :lang(ar), :lang(arc), :lan
 }
 
 .header__linklist-item:not(:last-child) {
-  margin-inline-end: 32px;
+  margin-inline-end: 28px;
 }
 
 .header__linklist-item.has-dropdown:hover:before {
   content: attr(data-item-title);
   opacity: 0;
   height: 100%;
-  margin-inline-start: -32px;
-  padding-inline-start: 32px;
-  padding-inline-end: 32px;
+  margin-inline-start: -28px;
+  padding-inline-start: 28px;
+  padding-inline-end: 28px;
   position: absolute;
   top: 0;
 }
@@ -7995,7 +7995,7 @@ input:checked + .popover__choice-label:is(:lang(ae), :lang(ar), :lang(arc), :lan
   white-space: nowrap;
   visibility: hidden;
   opacity: 0;
-  margin-inline-start: -32px;
+  margin-inline-start: -28px;
   padding-block-start: 20px;
   padding-block-end: 20px;
   transition: opacity .25s ease-in-out, visibility .25s ease-in-out;

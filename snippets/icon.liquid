@@ -127,16 +127,32 @@
         <path d="M0 1h18M0 13h18H0zm0-6h18H0z" fill="none" stroke="currentColor" stroke-width="{{ settings.icon_stroke_width }}"></path>
       </svg>
 
-    {%- when 'header-search' -%}
-      <svg focusable="false" width="{{ width | default: 18 }}" height="{{ height | default: 18 }}" class="{{ icon_class }}" viewBox="0 0 18 18">
-        <path d="M12.336 12.336c2.634-2.635 2.682-6.859.106-9.435-2.576-2.576-6.8-2.528-9.435.106C.373 5.642.325 9.866 2.901 12.442c2.576 2.576 6.8 2.528 9.435-.106zm0 0L17 17" fill="none" stroke="currentColor" stroke-width="{{ settings.icon_stroke_width }}"></path>
-      </svg>
+    {%- when 'header-search' -%}   
+          <svg focusable="false" width="{{ width | default: 20 }}" height="{{ height | default: 20 }}" class="{{ icon_class }}" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_172_18)">
+          <path d="M18.3333 18.3333L16.6667 16.6667M1.66663 9.58333C1.66663 5.21108 5.21104 1.66667 9.58329 1.66667C13.9555 1.66667 17.5 5.21108 17.5 9.58333C17.5 13.9556 13.9555 17.5 9.58329 17.5C5.21104 17.5 1.66663 13.9556 1.66663 9.58333Z" stroke="currentColor" stroke-width="{{ settings.icon_stroke_width }}" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_172_18">
+          <rect width="{{ width | default: 20 }}" height="{{ height | default: 20 }}" fill="currentColor"/>
+          </clipPath>
+          </defs>
+          </svg>
 
-    {%- when 'header-customer' -%}
-      <svg focusable="false" width="{{ width | default: 18 }}" height="{{ height | default: 17 }}" class="{{ icon_class }}" viewBox="0 0 18 17">
-        <circle cx="9" cy="5" r="4" fill="none" stroke="currentColor" stroke-width="{{ settings.icon_stroke_width }}" stroke-linejoin="round"></circle>
-        <path d="M1 17v0a4 4 0 014-4h8a4 4 0 014 4v0" fill="none" stroke="currentColor" stroke-width="{{ settings.icon_stroke_width }}"></path>
-      </svg>
+
+    {%- when 'header-customer' -%}      
+        <svg focusable="false" width="{{ width | default: 20 }}" height="{{ height | default: 20 }}" class="{{ icon_class }}" fill="white" viewBox="0 0 18 17" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_172_21)">
+        <path d="M15.4657 16.2907C14.6378 14.0765 12.503 12.5 9.99996 12.5C7.49694 12.5 5.36213 14.0765 4.53426 16.2907M15.4657 16.2907C17.2226 14.7629 18.3333 12.5111 18.3333 10C18.3333 5.39763 14.6023 1.66667 9.99996 1.66667C5.39759 1.66667 1.66663 5.39763 1.66663 10C1.66663 12.5111 2.77733 14.7629 4.53426 16.2907M15.4657 16.2907C14.0025 17.563 12.0912 18.3333 9.99996 18.3333C7.90873 18.3333 5.99741 17.563 4.53426 16.2907" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+        <circle cx="2.5" cy="2.5" r="2.5" transform="matrix(1 0 0 -1 7.5 10)" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+        </g>
+        <defs>
+        <clipPath id="clip0_172_21">
+        <rect width="{{ width | default: 20 }}" height="{{ height | default: 20 }}" fill="currentColor"/>
+        </clipPath>
+        </defs>
+</svg>
+
 
     {%- when 'header-cart' -%}
       <svg focusable="false" width="{{ width | default: 20 }}" height="{{ height | default: 18 }}" class="{{ icon_class }}" viewBox="0 0 20 18">
@@ -145,11 +161,21 @@
       </svg>
 
     {%- when 'header-shopping-cart' -%}
-      <svg focusable="false" width="{{ width | default: 21 }}" height="{{ height | default: 20 }}" class="{{ icon_class }}" viewBox="0 0 21 20">
-        <path d="M0 1H4L5 11H17L19 4H8" fill="none" stroke="currentColor" stroke-width="{{ settings.icon_stroke_width }}"></path>
-        <circle cx="6" cy="17" r="2" fill="none" stroke="currentColor" stroke-width="{{ settings.icon_stroke_width }}"></circle>
-        <circle cx="16" cy="17" r="2" fill="none" stroke="currentColor" stroke-width="{{ settings.icon_stroke_width }}"></circle>
+      <svg focusable="false" width="{{ width | default: 20 }}" height="{{ height | default: 20 }}" class="{{ icon_class }}" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#clip0_172_10)">
+      <path d="M4.99996 3.33333H15C16.8409 3.33333 18.3333 4.82572 18.3333 6.66667V10.8333C18.3333 12.6743 16.8409 14.1667 15 14.1667H8.33329C6.49234 14.1667 4.99996 12.6743 4.99996 10.8333V3.33333ZM4.99996 3.33333C4.99996 2.41286 4.25377 1.66667 3.33329 1.66667H1.66663" stroke="currentColor" stroke-width="{{ settings.icon_stroke_width }}" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M9.16663 17.0833C9.16663 17.7737 8.60698 18.3333 7.91663 18.3333C7.22627 18.3333 6.66663 17.7737 6.66663 17.0833C6.66663 16.393 7.22627 15.8333 7.91663 15.8333C8.60698 15.8333 9.16663 16.393 9.16663 17.0833Z" stroke="currentColor" stroke-width="{{ settings.icon_stroke_width }}"/>
+      <path d="M16.6666 17.0833C16.6666 17.7737 16.107 18.3333 15.4166 18.3333C14.7263 18.3333 14.1666 17.7737 14.1666 17.0833C14.1666 16.393 14.7263 15.8333 15.4166 15.8333C16.107 15.8333 16.6666 16.393 16.6666 17.0833Z" stroke="currentColor" stroke-width="{{ settings.icon_stroke_width }}"/>
+      <path d="M9.16663 10C11.1301 11.117 12.2063 11.1052 14.1666 10" stroke="currentColor" stroke-width="{{ settings.icon_stroke_width }}" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <defs>
+      <clipPath id="clip0_172_10">
+      <rect  width="{{ width | default: 20 }}" height="{{ height | default: 20 }}" fill="currentColor"/>
+      </clipPath>
+      </defs>
       </svg>
+      
+
 
     {%- when 'header-tote-bag' -%}
       <svg focusable="false" width="{{ width | default: 20 }}" height="{{ height | default: 19 }}" class="{{ icon_class }}" viewBox="0 0 20 19">
@@ -379,9 +405,17 @@
 
   {%- comment -%} SOCIAL MEDIA {%- endcomment -%}
     {%- when 'facebook' -%}
-      <svg focusable="false" width="{{ width | default: 9 }}" height="{{ height | default: 17 }}" class="{{ icon_class }}" viewBox="0 0 9 17">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.486 16.2084L2.486 8.81845H0L0 5.93845L2.486 5.93845L2.486 3.81845C2.38483 2.79982 2.73793 1.78841 3.45107 1.05407C4.16421 0.319722 5.16485 -0.0628415 6.186 0.00844868C6.9284 0.00408689 7.67039 0.0441585 8.408 0.128449V2.69845L6.883 2.69845C6.4898 2.61523 6.08104 2.73438 5.79414 3.01585C5.50724 3.29732 5.3803 3.70373 5.456 4.09845L5.456 5.93845H8.308L7.936 8.81845H5.46L5.46 16.2084H2.486Z" fill="currentColor"></path>
-      </svg>
+      <svg focusable="false" width="{{ width | default: 16 }}" height="{{ height | default: 16 }}" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_217_3595)">
+        <path d="M10.6646 2.65667H12.1253V0.112667C11.8733 0.078 11.0066 0 9.9973 0C7.8913 0 6.44863 1.32467 6.44863 3.75933V6H4.12463V8.844H6.44863V16H9.29797V8.84467H11.528L11.882 6.00067H9.2973V4.04133C9.29797 3.21933 9.5193 2.65667 10.6646 2.65667Z" fill="#8DB1B5"/>
+        </g>
+        <defs>
+        <clipPath id="clip0_217_3595">
+        <rect width="{{ width | default: 16 }}" height="{{ height | default: 16 }}" fill="white"/>
+        </clipPath>
+        </defs>
+        </svg>
+
 
     {%- when 'instagram' -%}
       <svg focusable="false" width="{{ width | default: 16 }}" height="{{ height | default: 16 }}" class="{{ icon_class }}" viewBox="0 0 16 16">
@@ -399,18 +433,31 @@
       </svg>
 
     {%- when 'twitter' -%}
-      <svg focusable="false" width="{{ width | default: 24 }}" height="{{ height | default: 24 }}" class="{{ icon_class }}" viewBox="0 0 24 24">
-        <path d="M16.94 4h2.715l-5.93 6.777L20.7 20h-5.462l-4.278-5.593L6.065 20H3.35l6.342-7.25L3 4h5.6l3.868 5.113L16.94 4Zm-.952 14.375h1.504L7.784 5.54H6.17l9.818 12.836Z" fill="currentColor"/>
-      </svg>
+        <svg focusable="false" width="{{ width | default: 16 }}" height="{{ height | default: 16 }}" class="{{ icon_class }}" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_217_3599)">
+        <path d="M14.8507 14.3679L9.49006 6.75662L8.88396 5.8958L5.04855 0.451204L4.73068 0H0.0183105L1.16761 1.63213L6.26654 8.8722L6.87265 9.7321L10.9696 15.5498L11.2875 16.0005H15.9999L14.8507 14.3679ZM11.8471 14.9582L7.59094 8.91472L6.98484 8.05443L2.04579 1.04167H4.17037L8.16458 6.71305L8.77068 7.57334L13.9718 14.9582H11.8471Z" fill="#8DB1B5"/>
+        <path d="M6.98525 8.0542L7.59135 8.91449L6.87279 9.73174L1.35955 15.9998H0L6.26668 8.87184L6.98525 8.0542Z" fill="#8DB1B5"/>
+        <path d="M15.4327 0L9.48971 6.75662L8.77114 7.57334L8.16504 6.71305L8.88361 5.8958L12.9093 1.31676L14.0732 0H15.4327Z" fill="#8DB1B5"/>
+        </g>
+        <defs>
+        <clipPath id="clip0_217_3599">
+        <rect width="{{ width | default: 16 }}" height="{{ height | default: 16 }}" fill="white"/>
+        </clipPath>
+        </defs>
+        </svg>
+
+        {%- when 'linkedin' -%}
+        <svg focusable="false" width="{{ width | default: 13 }}" height="{{ height | default: 16 }}" class="{{ icon_class }}" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 16.0001V10.1401C16 7.26006 15.38 5.06006 12.02 5.06006C10.4 5.06006 9.32004 5.94006 8.88004 6.78006H8.84003V5.32006H5.66003V16.0001H8.98004V10.7001C8.98004 9.30006 9.24004 7.96006 10.96 7.96006C12.66 7.96006 12.68 9.54006 12.68 10.7801V15.9801H16V16.0001Z" fill="#8DB1B5"/>
+        <path d="M0.26001 5.32031H3.58001V16.0003H0.26001V5.32031Z" fill="#8DB1B5"/>
+        <path d="M1.92 0C0.86 0 0 0.86 0 1.92C0 2.98 0.86 3.86 1.92 3.86C2.98 3.86 3.84 2.98 3.84 1.92C3.84 0.86 2.98 0 1.92 0Z" fill="#8DB1B5"/>
+        </svg>
+   
+      
 
     {%- when 'fancy' -%}
       <svg fill="none" focusable="false" width="{{ width | default: 10 }}" height="{{ height | default: 16 }}" class="{{ icon_class }}" viewBox="0 0 10 16">
         <path d="M8.89051 11.6636H6.26863V14.729C6.26863 15.4318 5.70147 16 4.99998 16C4.29849 16 3.73133 15.4318 3.73133 14.729V11.6636H1.10945C0.497511 11.6636 0 11.1651 0 10.552V5.00935C0 2.24299 2.2388 0 4.99998 0C7.76117 0 9.99996 2.24299 9.99996 5.00935V10.547C10.0049 11.1651 9.50743 11.6636 8.89051 11.6636Z" fill="currentColor"></path>
-      </svg>
-
-    {%- when 'linkedin' -%}
-      <svg fill="none" focusable="false" width="{{ width | default: 13 }}" height="{{ height | default: 13 }}" class="{{ icon_class }}" viewBox="0 0 13 13">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.12412 1.56485C3.12412 0.70105 2.42432 0 1.56256 0C0.697275 0 0 0.70105 0 1.56485C0 2.42916 0.697275 3.13021 1.56256 3.13021C2.42432 3.13021 3.12412 2.42916 3.12412 1.56485ZM2.91019 13H0.213925V4.31649H2.91019V13ZM7.18264 4.31648H4.6004V13H7.29112V8.70525C7.29112 7.57205 7.50505 6.47473 8.90666 6.47473C10.2891 6.47473 10.3068 7.77018 10.3068 8.77702V13H13V8.23771C13 5.89903 12.496 4.10117 9.76892 4.10117C8.45812 4.10117 7.57871 4.82092 7.21948 5.50377H7.18264V4.31648Z" fill="currentColor"></path>
       </svg>
 
     {%- when 'snapchat' -%}
@@ -439,9 +486,17 @@
       </svg>
 
     {%- when 'youtube' -%}
-      <svg fill="none" focusable="false" width="{{ width | default: 18 }}" height="{{ height | default: 13 }}" class="{{ icon_class }}" viewBox="0 0 18 13">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0325 0.369454C16.807 0.572743 17.4168 1.17173 17.6238 1.9324C18 3.31101 18 6.1875 18 6.1875C18 6.1875 18 9.06389 17.6238 10.4427C17.4168 11.2033 16.807 11.8023 16.0325 12.0056C14.6288 12.375 9 12.375 9 12.375C9 12.375 3.37122 12.375 1.96752 12.0056C1.19311 11.8023 0.583159 11.2033 0.376159 10.4427C0 9.06389 0 6.1875 0 6.1875C0 6.1875 0 3.31101 0.376159 1.9324C0.583159 1.17173 1.19311 0.572743 1.96752 0.369454C3.37122 0 9 0 9 0C9 0 14.6288 0 16.0325 0.369454ZM11.8636 6.1876L7.1591 8.79913V3.57588L11.8636 6.1876Z" fill="currentColor"></path>
-      </svg>
+        <svg focusable="false" width="{{ width | default: 16 }}" height="{{ height | default: 16 }}" class="{{ icon_class }}" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_217_3597)">
+        <path d="M15.646 5.61934L15.666 5.75001C15.4726 5.06401 14.9506 4.53468 14.2873 4.34201L14.2733 4.33868C13.026 4.00001 8.00662 4.00001 8.00662 4.00001C8.00662 4.00001 2.99995 3.99334 1.73995 4.33868C1.06395 4.53468 0.541285 5.06401 0.351285 5.73601L0.347952 5.75001C-0.118048 8.18401 -0.121381 11.1087 0.368619 13.7147L0.347952 13.5827C0.541285 14.2687 1.06329 14.798 1.72662 14.9907L1.74062 14.994C2.98662 15.3333 8.00729 15.3333 8.00729 15.3333C8.00729 15.3333 13.0133 15.3333 14.274 14.994C14.9506 14.798 15.4733 14.2687 15.6633 13.5967L15.6666 13.5827C15.8786 12.4507 16 11.148 16 9.81734C16 9.76868 16 9.71934 15.9993 9.67001C16 9.62468 16 9.57068 16 9.51668C16 8.18534 15.8786 6.88268 15.646 5.61934ZM6.40529 12.1007V7.23868L10.5826 9.67334L6.40529 12.1007Z" fill="#8DB1B5"/>
+        </g>
+        <defs>
+        <clipPath id="clip0_217_3597">
+        <rect width="{{ width | default: 16 }}" height="{{ height | default: 16 }}" fill="white"/>
+        </clipPath>
+        </defs>
+        </svg>
+  
 
     {%- when 'line' -%}
       <svg fill="none" focusable="false" width="{{ width | default: 20 }}" height="{{ height | default: 20 }}" class="{{ icon_class }}" viewBox="0 0 20 20">

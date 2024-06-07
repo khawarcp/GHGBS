@@ -159,8 +159,8 @@ other resources, such as CSS or JS
        - vertical-breather: this is a variable that defines the global "spacing" between sections, and inside the section
                             to create some "breath" and minimum spacing
      */
-    --container-max-width: 1600px;
-    --container-gutter: 24px;
+    --container-max-width: {{ settings.container_width }}px;
+    --container-gutter: {{ settings.container_gap }}px;
     --container-max-width-minus-gutters: calc(var(--container-max-width) - (var(--container-gutter)) * 2);
     --container-outer-width: max(calc((100vw - var(--container-max-width-minus-gutters)) / 2), var(--container-gutter));
     --container-outer-margin: var(--container-outer-width);
@@ -179,7 +179,7 @@ other resources, such as CSS or JS
 
   @media screen and (min-width: 741px) {
     :root {
-      --container-gutter: 40px;
+      --container-gutter: {{ settings.container_gap }}px;
       --grid-column-count: 20;
       --vertical-breather: {% if settings.vertical_spacing == 'small' %}40px{% elsif settings.vertical_spacing == 'medium' %}48px{% else %}64px{% endif %};
       --vertical-breather-tight: {% if settings.vertical_spacing == 'small' %}40px{% elsif settings.vertical_spacing == 'medium' %}48px{% else %}64px{% endif %};

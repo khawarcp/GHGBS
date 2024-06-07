@@ -1,5 +1,10 @@
 {% if button_text != blank %}    
 <a href="{{ button_url | default: "#" }}" {% if title %} title="{{ title }}" {% endif %} {% if class %}
         class="{{ class }}"
-    {% endif %}> {{ button_text }} </a>
+    {% endif %}> <p>{{ button_text }}</p> 
+    {% if image %}
+             <img  src="{{ 'btn-arow.svg' |  asset_url }}" alt="arrow"  width="{{ image.width }}" 
+             height="{{ image.height }}" {% if lazyload %} loading="{{ lazyload }}"{% endif %} >
+        {% endif %}
+    </a>
 {% endif %}

@@ -735,11 +735,15 @@
         font-family: "URW DIN";
         font-size: 18px;
     }
-
+    
     .footer-right {
         padding: 30px 0 30px 0;
         flex-direction: column;
         gap: 20px;
+    }
+
+    .footer__aside{
+        padding: 30px 0 30px 0;
     }
 
     .footer-cntct {

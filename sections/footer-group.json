@@ -2,105 +2,56 @@
   "type": "footer",
   "name": "Footer group",
   "sections": {
-    "text-with-icons": {
-      "type": "text-with-icons",
-      "blocks": {
-        "item-1": {
-          "type": "item",
-          "settings": {
-            "icon": "picto-box",
-            "custom_icon_width": 50,
-            "title": "Free shipping",
-            "content": "<p>Free worldwide shipping and returns - customs and duties taxes included<\/p>"
-          }
-        },
-        "item-2": {
-          "type": "item",
-          "settings": {
-            "icon": "picto-phone",
-            "custom_icon_width": 50,
-            "title": "Customer service",
-            "content": "<p>We are available from monday to friday to answer your questions.<\/p>"
-          }
-        },
-        "item-3": {
-          "type": "item",
-          "settings": {
-            "icon": "picto-lock",
-            "custom_icon_width": 50,
-            "title": "Secure payment",
-            "content": "<p>Your payment information is processed securely.<\/p>"
-          }
-        },
-        "item-4": {
-          "type": "item",
-          "settings": {
-            "icon": "picto-email",
-            "custom_icon_width": 50,
-            "title": "Contact us",
-            "content": "<p>Need to contact us ? Just send us an e-mail at info@yourstore.com<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "item-1",
-        "item-2",
-        "item-3",
-        "item-4"
-      ],
-      "disabled": true,
-      "settings": {
-        "background": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)"
-      }
-    },
     "footer": {
       "type": "footer",
       "blocks": {
-        "text": {
-          "type": "text",
-          "settings": {
-            "title": "What is squidhaus?",
-            "content": "<p>SquidHaus is a metaphor for chasing perfection. The fulfillment in doing so does not come from the result but from the process itself. Members of the SquidHaus community strive for perfection but know that it is not achievable. There is no peak... only a never ending climb. <\/p>"
-          }
-        },
-        "links": {
+        "links_JD7YkR": {
           "type": "links",
           "settings": {
+            "menu_heading": "Shop",
             "menu": "footer"
           }
         },
-        "newsletter": {
-          "type": "newsletter",
+        "links_KMTrVx": {
+          "type": "links",
           "settings": {
-            "title": "HausLIST",
-            "content": "<p>Add your e-mail to the HAUSLIST and get access to exclusive members only drops and content you won't find anywhere else...<\/p>"
+            "menu_heading": "Customer Services",
+            "menu": "customer-services"
           }
         },
-        "41607537-20bc-4ffb-99e5-74c400ac1063": {
-          "type": "image",
+        "text_p9j9Gg": {
+          "type": "text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_5315.jpg",
-            "image_width": 140
+            "title": "Core Values",
+            "content": "<p>We are committed to bringing the absolute best grinding and brewing equipment to North America, Canada, and Latin America. Our philosophy of support and customer care is very important to us. Trust, reliability, and innovation are the qualities that drive our company.<\/p>"
           }
         }
       },
       "block_order": [
-        "text",
-        "links",
-        "newsletter",
-        "41607537-20bc-4ffb-99e5-74c400ac1063"
+        "links_JD7YkR",
+        "links_KMTrVx",
+        "text_p9j9Gg"
       ],
       "settings": {
+        "footer_logo": "shopify:\/\/shop_images\/Footer_Logo.png",
+        "enable_newsletter": true,
+        "newsletter_heading": "SignUp To Our Newsletter",
+        "newsletter_text": "For industry insights and latest deals for North America",
         "show_payment_icons": true,
         "enable_follow_on_shop": false,
-        "show_country_selector": true,
-        "show_locale_selector": true
+        "show_country_selector": false,
+        "show_locale_selector": false,
+        "phone_heading": "Call Us",
+        "phone_number": "919-383-076",
+        "email_heading": "Email Us",
+        "email_address": "support@ghgbs.com",
+        "location_heading": "Address",
+        "address": "GH Grinding & Brewing Solutions, 4225 Bennett Memorial Road, Durham.",
+        "map": "https:\/\/maps.app.goo.gl\/BTCkb1H4HgLtRs5BA"
       }
     }
   },
   "order": [
-    "text-with-icons",
     "footer"
   ]
 }

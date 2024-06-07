@@ -9,72 +9,61 @@
   }
 </style>
 
-<footer class="footer {% if settings.footer_background == settings.background %}footer--bordered{% endif %}">
+{% liquid
+assign greater_block = false 
+  for block in section.blocks
+  if section.blocks.size > 3
+      assign greater_block = true 
+  endif
+  endfor
+%}
+
+{% style %}
+    {% unless section.settings.enable_newsletter %}
+    .footer-logo {
+          border-color: transparent;
+      }
+
+      .footer-logo-dta.justify-between {
+          justify-content: center;
+      }
+  {% endunless %}
+  {% if greater_block %}
+    .shop {
+        max-width: 32%;
+    }
+
+    .footer-nav.flex.justify-between {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .shop:nth-child(n+4) {
+        margin-top: 30px;
+    }
+  {% endif  %}
+{% endstyle %}
+
+<footer id="footer" class="footer {% if settings.footer_background == settings.background %}footer--bordered{% endif %}">
   <div class="container">
-    <div class="footer__inner">
-      <div class="footer__item-list">
-        {%- for block in section.blocks -%}
-          {%- capture block_content -%}
-            {%- case block.type -%}
-              {%- when 'image' -%}
-                {%- if block.settings.image != blank -%}
-                  {%- capture sizes_attribute -%}{{ block.settings.image_width }}px{%- endcapture -%}
-                  {%- capture style_attribute -%}width: {{ block.settings.image_width }}px{%- endcapture -%}
-                  {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', style: style_attribute, sizes: sizes_attribute, widths: '100,200,300,400,500,600', class: 'footer__image' -}}
-                {%- endif -%}
-
-              {%- when 'text' -%}
-                {%- if block.settings.title != blank -%}
-                  <p class="footer__item-title heading heading--small">{{ block.settings.title | escape }}</p>
-                {%- endif -%}
-
-                {%- if block.settings.content != blank -%}
-                  <div class="footer__item-content">
-                    {{- block.settings.content -}}
-                  </div>
-                {%- endif -%}
-
-              {%- when 'links' -%}
-                {%- assign menu = block.settings.menu -%}
-
-                {%- if menu != blank -%}
-                  <p class="footer__item-title heading heading--small">{{ menu.title }}</p>
-
-                  <div class="footer__item-content">
-                    <ul class="linklist list--unstyled" role="list">
-                      {%- for link in menu.links -%}
-                        <li class="linklist__item">
-                          <a href="{{ link.url }}" class="link--faded">{{ link.title }}</a>
-                        </li>
-                      {%- endfor -%}
-                    </ul>
-                  </div>
-                {%- endif -%}
-
-              {%- when 'social_media' -%}
-                {%- if block.settings.title != blank -%}
-                  <p class="footer__item-title heading heading--small">{{ block.settings.title | escape }}</p>
-                {%- endif -%}
-
-                <div class="footer__item-content">
-                  {%- if block.settings.content != blank -%}
-                    {{- block.settings.content -}}
-                  {%- endif -%}
-
-                  {%- render 'social-media' -%}
-                </div>
-
-              {%- when 'newsletter' -%}
-                {%- if block.settings.title != blank -%}
-                  <p class="footer__item-title heading heading--small">{{ block.settings.title | escape }}</p>
-                {%- endif -%}
-
-                <div class="footer__item-content">
-                  {%- if block.settings.content != blank -%}
-                    {{- block.settings.content -}}
-                  {%- endif -%}
-
-                  {%- form 'customer', id: 'footer-newsletter', class: 'footer__newsletter-form form' -%}
+      <div class="footer-content">
+          <div class="footer-logo-dta flex justify-between">
+              <div class="footer-logo">
+                  <a href="{{ routes.root_url }}">
+                    {% assign logo_alt = section.settings.footer_logo.alt |  default : shop.name %}
+                    {% render 'image-snippet', image: section.settings.footer_logo, alt: logo_alt, lazyload: 'lazy'  %}
+                  </a>
+              </div>
+              {% if section.settings.enable_newsletter %}
+              <div class="footer-news">
+                  {% if section.settings.newsletter_heading != blank %}
+                  <h2> {{ section.settings.newsletter_heading }} </h2>
+                  {% endif %}
+                  {% if section.settings.newsletter_text != blank %}
+                  <p>{{ section.settings.newsletter_text }}</p>
+                  {% endif %}
+                
+                  {%- form 'customer', id: 'footer-newsletter' -%}
                     {%- if form.posted_successfully? -%}
                       <div class="form__banner banner banner--success">
                         <span class="banner__ribbon">{% render 'icon' with 'form-success' %}</span>
@@ -89,26 +78,126 @@
                       {%- endif -%}
 
                       <input type="hidden" name="contact[tags]" value="newsletter">
-
-                      <div class="input">
-                        <input type="email" id="footer[contact][email]" name="contact[email]" class="input__field input__field--text">
-                        <label for="footer[contact][email]" class="input__label">{{ 'footer.newsletter.email' | t }}</label>
-                        <button type="submit" class="input__submit-icon tap-area" title="{{ 'footer.newsletter.submit' | t }}">{% render 'icon' with 'nav-arrow-right', direction_aware: true %}</button>
-                      </div>
+                      <input type="email" type="email" id="footer[contact][email]" name="contact[email]"  placeholder="{{ 'footer.newsletter.email' | t }}">
+                      <input type="submit" value="{{ 'footer.newsletter.submit' | t }}">
                     {%- endif -%}
                   {%- endform -%}
-                </div>
-            {%- endcase -%}
-          {%- endcapture -%}
+              </div>
+                {% endif %}
+          </div>
 
-          {%- if block_content != blank -%}
-            <div class="footer__item footer__item--{{ block.type | replace: '_', '-' }} {% if forloop.first %}is-first{% endif %}" {{ block.shopify_attributes }}>
-              {{- block_content -}}
-            </div>
-          {%- endif -%}
-        {%- endfor -%}
+          <div class="footer-nav flex justify-between">
+            {%- for block in section.blocks -%}              
+                {%- case block.type -%}
+                  {%- when 'links' -%}
+                    {%- assign menu = block.settings.menu -%}
+    
+                    {%- if menu != blank -%}
+                      <div class="shop">
+                        <h3> {{ block.settings.menu_heading }} </h3>
+                        <nav class="shop-lst">
+                            <ul>
+                              {%- for link in menu.links -%}
+                                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                              {%- endfor -%}
+                            </ul>
+                        </nav>
+                    </div>
+                    {%- endif -%}
+
+                    {%- when 'text' -%}
+                      <div class="shop">
+                      {%- if block.settings.title != blank -%}
+                        <h3>{{ block.settings.title | escape }}</h3>
+                      {%- endif -%}
+      
+                      {%- if block.settings.content != blank -%}
+                        <div class="footer__item-content">
+                          {{- block.settings.content -}}
+                        </div>
+                      {%- endif -%}  
+                      </div>
+
+                      {%- when 'image' -%}
+                        <div class="shop">
+                        {%- if block.settings.image != blank -%}
+                          {%- capture sizes_attribute -%}{{ block.settings.image_width }}px{%- endcapture -%}
+                          {%- capture style_attribute -%}width: {{ block.settings.image_width }}px{%- endcapture -%}
+                          {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', style: style_attribute, sizes: sizes_attribute, widths: '100,200,300,400,500,600', class: 'footer__image' -}}
+                        {%- endif -%}   
+                        </div>
+
+                        {%- when 'social_media' -%}
+                          <div class="shop">
+                          {%- if block.settings.title != blank -%}
+                            <p class="footer__item-title heading heading--small">{{ block.settings.title | escape }}</p>
+                          {%- endif -%}
+          
+                          <div class="footer__item-content">
+                            {%- if block.settings.content != blank -%}
+                              {{- block.settings.content -}}
+                            {%- endif -%}
+          
+                            {%- render 'social-media' -%}
+                          </div>    
+                          </div> 
+              {%- endcase -%}
+            {%- endfor -%}
+          </div>
+          {% unless section.settings.phone_number == blank and  section.settings.email_address == blank and section.settings.address == blank %}
+          <div class="footer-cntct flex justify-between">
+            {% if section.settings.phone_number != blank %}
+              <a href="tel:{{ section.settings.phone_number }}">
+                  <div class="ftr-cntc-dta flex gap-20">
+                      <div class="ftr-cal">
+                          {% render 'image-snippet-np', image: 'footer-call.svg' , assetURL: true, lazyload: 'lazy', alt: 'Call Icon'  %}
+                      </div>
+                      <div class="ftr-cal-txt">
+                          <h3> {{ section.settings.phone_heading }} </h3>
+                          <p> {{ section.settings.phone_number }} </p>
+                      </div>
+                  </div>
+              </a>
+            {% endif %}
+            {% if section.settings.email_address != blank %}
+              <a href="mailto:{{ section.settings.email_address }}">
+                  <div class="ftr-cntc-dta-mail flex gap-20">
+                      <div class="ftr-cal">
+                          {% render 'image-snippet-np', image: 'footer-mail.svg' , assetURL: true, lazyload: 'lazy', alt: 'Mail Icon'  %}
+                      </div>
+                      <div class="ftr-cal-txt">
+                          <h3> {{ section.settings.email_heading }} </h3>
+                          <p> {{ section.settings.email_address }} </p>
+                      </div>
+                  </div>
+              </a>
+            {% endif %}
+              {% if section.settings.address != blank %}
+              <a href="{{ section.settings.map |  default: "#." }}" {% if section.settings.map != blank %} target="_blank" {% endif %}>
+              <div class="ftr-cntc-dta flex gap-20">
+                  <div class="ftr-cal">
+                      {% render 'image-snippet-np', image: 'footer-adrs.svg' , assetURL: true, lazyload: 'lazy', alt: 'Location Icon'  %}
+                  </div>
+                  <div class="ftr-cal-txt">
+                      <h3> {{ section.settings.location_heading }} </h3>
+                      <p> {{ section.settings.address }} </p>
+                  </div>
+              </div>
+              </a>
+            {% endif %}
+
+          </div>
+          {% endunless %}
+
+          <div class="footer-right flex justify-between align-center">
+              <p>&copy; {{ shop.name }} {{  'now' |  date : "%Y" }}. All Rights Reserved.</p>
+
+              <div class="footer-social flex">
+                  {%- render 'social-media' -%}
+              </div>
+          </div>
       </div>
-
+      {% if section.settings.show_country_selector and  section.settings.show_country_selector and section.settings.show_locale_selector %}
       <div class="footer__aside">
         {%- if section.settings.show_country_selector and localization.available_countries.size > 1 -%}
           {%- assign country_selector = true -%}
@@ -132,7 +221,7 @@
 
                 <popover-content id="footer-currency-selector" class="popover popover--top popover--left popover--small">
                   <span class="popover__overlay"></span>
-
+\
                   <header class="popover__header">
                     <span class="popover__title heading h6">{{- 'footer.general.country' | t -}}</span>
 
@@ -194,8 +283,7 @@
           {%- endform -%}
         {%- endif -%}
 
-        <span class="footer__copyright text--xsmall text--subdued">{{ shop.name }} <span class="square-separator square-separator--block square-separator--subdued"></span> {{ powered_by_link | replace: '<a', '<a class="link--faded"' }}</span>
-
+       
         <div class="footer__follow-and-payment">
           {%- if section.settings.show_payment_icons and shop.enabled_payment_types.size > 0 -%}
             <div class="footer__payment-methods">
@@ -216,16 +304,42 @@
           {%- endif -%}
         </div>
       </div>
-    </div>
+        {% endif %}
   </div>
 </footer>
-
 {% schema %}
 {
   "name": "Footer",
   "class": "shopify-section--footer",
   "max_blocks": 5,
   "settings": [
+    {
+      "type": "image_picker",
+      "id": "footer_logo",
+      "label": "Logo"
+    },
+    {
+      "type": "header",
+      "content": "Newsletter"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_newsletter",
+      "label": "Enable Newsletter",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "newsletter_heading",
+      "label": "Heading",
+      "default": "SignUp To Our Newsletter"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "newsletter_text",
+      "label": "Text",
+      "default": "For industry insights and latest deals for North America"
+    },
     {
       "type": "checkbox",
       "id": "show_payment_icons",
@@ -260,6 +374,59 @@
       "id": "show_locale_selector",
       "label": "Show language selector",
       "default": true
+    },
+    {
+      "type": "header",
+      "content": "Phone Number"
+    },
+    {
+      "type": "text",
+      "id": "phone_heading",
+      "label": "Heading",
+      "default": "Call Us"
+    },
+    {
+      "type": "text",
+      "id": "phone_number",
+      "label": "Number",
+      "default": "919-383-076"
+    },
+    {
+      "type": "header",
+      "content": "Email Address"
+    },
+    {
+      "type": "text",
+      "id": "email_heading",
+      "label": "Heading",
+      "default": "Email Us"
+    },
+    {
+      "type": "text",
+      "id": "email_address",
+      "label": "Email",
+      "default": "support@ghgbs.com"
+    },
+    {
+      "type": "header",
+      "content": "Location"
+    },
+    {
+      "type": "text",
+      "id": "location_heading",
+      "label": "Heading",
+      "default": "Address"
+    },
+    {
+      "type": "text",
+      "id": "address",
+      "label": "Address",
+      "default": "GH Grinding & Brewing Solutions, 4225 Bennett Memorial Road, Durham."
+    },
+    {
+      "type": "url",
+      "id": "map",
+      "label": "Map URL"
     }
   ],
   "blocks": [
@@ -307,6 +474,12 @@
       "type": "links",
       "name": "Links",
       "settings": [
+        {
+          "type": "text",
+          "id": "menu_heading",
+          "label": "Menu Title",
+          "default": "Quick Links"
+        },
         {
           "type": "link_list",
           "id": "menu",
