@@ -1,0 +1,95 @@
+<section id="aboutus">
+    <div class="container">
+        <div class="aboutus-hdng-prnt flex">
+            <div class="aboutus-hdng">
+                {% if section.settings.heading != blank %}                    
+                    <h2> {{ section.settings.heading }} </h2>
+                {% endif %}
+                <div class="trst flex"> {% render 'image-snippet-np', image: 'Border.svg' , assetURL: true, lazyload: 'lazy', width: '83' %}
+                    <h6> Trust, reliability, and innovation are the qualities that drive our company.</h6>
+                </div>
+                <div class="richtext-content">
+                    {% if section.settings.show_custom_content and section.settings.page_content != blank %}
+                        {{ section.settings.page_content }}
+                    {% else %}
+                        {{ page.content }}
+                    {% endif %}
+                </div>
+
+                <div class="access-trst flex">
+                    {% for block in section.blocks %}
+                        {% case block.type %}
+                               {% when 'feature' %}
+                                    {% unless block.settings.text == blank and block.settings.heading == blank and block.settings.image == blank %} 
+                                        <div class="industry-exp">
+                                            {% render 'image-snippet-np', image: block.settings.image , imageURL: true, lazyload: 'lazy', width: '48', height: '48'  %}
+                                            <h4>  {{ block.settings.heading }} </h4>
+                                            <p> {{ block.settings.text }} </p>
+                                        </div>
+                                    {% endunless %}
+                     {% endcase %}
+                 {% endfor %}
+                </div>
+            </div>
+            <div class="aboutus-hdng-img">
+                {% render 'image-snippet', image: section.settings.image, lazyload: 'lazy' %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+    {
+        "name": "Content",
+        "settings": [
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading",
+                "default": "About Grinder & Bewering Solutions"
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_custom_content",
+                "label": "Show Custom Content",
+                "default": false
+            },
+            {
+                "type": "richtext",
+                "id": "page_content",
+                "label": "Page Content"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "feature",
+                "name": "Feature",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "Heading",
+                        "default": "Access to All"
+                    },
+                    {
+                        "type": "inline_richtext",
+                        "id": "text",
+                        "label": "Text",
+                        "default": "With many years of experience, we understand the demands in the coffee industry."
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}

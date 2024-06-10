@@ -2,6 +2,7 @@
     z-index: 0;
 }
 
+mobile-navigation#mobile-menu-drawer,
 cart-drawer#mini-cart,
 predictive-search-drawer#search-drawer {
     padding: 0 20px;
@@ -29,11 +30,29 @@ predictive-search-drawer#search-drawer {
     gap: 12px;
 }
 
+.grinder-opt {
+    margin-top: 24px;
+}
+
+.grinder-img img,
+.brewer-img img{
+    max-width: unset;
+}
+
+.our-team > img {
+    border-radius: 10px;
+}
+
 @media screen and (min-width: 1200px) {
     store-header .container {
         padding: 0;
     }
     .header__secondary-links {
         max-width: max-content;
+    }
+}
+@media screen and (max-width: 667px) {
+    .grinder-opt {
+        margin-top: 20px;
     }
 }

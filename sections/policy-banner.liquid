@@ -1,0 +1,33 @@
+<section class="about-banner flex align-center justify-center"
+style="background-image: url('{{ section.settings.image |  image_url }}');">
+<div class="container">
+    <div class="banner-cntnt">
+        <div class="banner-hed">
+            <h1> {{ page.title }} </h1>
+            <p> {{ section.settings.banner_text }} </p>
+        </div>
+    </div>
+    <div class="banner-logo">
+        {% render 'image-snippet-np', image: settings.banner_logo , imageURL: true, lazyload: 'eager'  %}
+    </div>
+</div>
+</section>
+
+{% schema %}
+    {
+        "name": "Policy Banner",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "inline_richtext",
+                "id": "banner_text",
+                "label": "Banner Text",
+                "default" :"We provide superior coffee equipment, decades of experience and genuine service and support to your coffee business."
+            }
+        ]
+    }
+{% endschema %}

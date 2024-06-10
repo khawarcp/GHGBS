@@ -3,6 +3,9 @@
     "page-banner": {
       "type": "page-banner",
       "settings": {
+        "show_custom_title": true,
+        "custom_title": "Contact <br> With US",
+        "image": "shopify:\/\/shop_images\/contact-bg.png"
       }
     }
   },

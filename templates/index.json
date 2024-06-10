@@ -11,9 +11,148 @@
         "button_text": "Shop Grinders",
         "button_url": "shopify:\/\/collections\/grinders"
       }
+    },
+    "index_explore_NnfyaQ": {
+      "type": "index-explore",
+      "blocks": {
+        "feature_Hi9kt7": {
+          "type": "feature",
+          "settings": {
+            "text": "Industry Experience"
+          }
+        },
+        "feature_9XjxMM": {
+          "type": "feature",
+          "settings": {
+            "text": "Quality Equipment"
+          }
+        }
+      },
+      "block_order": [
+        "feature_Hi9kt7",
+        "feature_9XjxMM"
+      ],
+      "settings": {
+        "heading": "Explore By Solutions",
+        "collection_1": "grinders",
+        "show_custom_image_1": true,
+        "show_custom_text_1": "As the sole importer for Mahlkönig in the US for the past 15 years, we know grinders! We carry a grinder for every need. Our knowledgeable staff loves to help--we'll find the right grinder for you or your customer.",
+        "collection_image_1": "shopify:\/\/shop_images\/grinder.png",
+        "button_text_1": "Shop Grinders",
+        "button_url_1": "",
+        "collection_2": "brewers",
+        "show_custom_image_2": true,
+        "collection_image_2": "shopify:\/\/shop_images\/brewer.png",
+        "button_text_2": "Shop Brewers",
+        "button_url_2": "",
+        "collection_image_bottom_2": "shopify:\/\/shop_images\/coffee-maker.svg"
+      }
+    },
+    "index_brands_gGPWB4": {
+      "type": "index-brands",
+      "blocks": {
+        "brand_997Kth": {
+          "type": "brand",
+          "settings": {
+            "display_label": true,
+            "brand_image": "shopify:\/\/shop_images\/Mahlkonig_78bad704-427b-4183-80c0-4e3156c5cfca.png",
+            "brand_name": "Mahlkonig"
+          }
+        },
+        "brand_GWQmm4": {
+          "type": "brand",
+          "settings": {
+            "display_label": false,
+            "brand_image": "shopify:\/\/shop_images\/Tone_59e73bc6-abad-418a-b32c-829a4785ab75.png",
+            "brand_name": "Tone"
+          }
+        },
+        "brand_XhME8Q": {
+          "type": "brand",
+          "settings": {
+            "display_label": false,
+            "brand_image": "shopify:\/\/shop_images\/Anfim_46b75f95-5be2-4b83-af9d-89696ec87eca.png",
+            "brand_name": "Anfim"
+          }
+        },
+        "brand_F7nGJz": {
+          "type": "brand",
+          "settings": {
+            "display_label": false,
+            "brand_image": "shopify:\/\/shop_images\/PUQ.png",
+            "brand_name": "PUQ Press"
+          }
+        },
+        "brand_n3f7Th": {
+          "type": "brand",
+          "settings": {
+            "display_label": false,
+            "brand_image": "shopify:\/\/shop_images\/Etzinger.png",
+            "brand_name": "Etzinger"
+          }
+        },
+        "brand_UBCcGQ": {
+          "type": "brand",
+          "settings": {
+            "display_label": false,
+            "brand_image": "shopify:\/\/shop_images\/Bentwood.png",
+            "brand_name": "Bentwood"
+          }
+        },
+        "brand_qR3CWd": {
+          "type": "brand",
+          "settings": {
+            "display_label": false,
+            "brand_image": "shopify:\/\/shop_images\/Ceado.png",
+            "brand_name": "Ceado"
+          }
+        },
+        "brand_4wpg3k": {
+          "type": "brand",
+          "settings": {
+            "display_label": false,
+            "brand_image": "shopify:\/\/shop_images\/Newco.png",
+            "brand_name": "Newco"
+          }
+        },
+        "brand_wJHijH": {
+          "type": "brand",
+          "settings": {
+            "display_label": false,
+            "brand_image": "shopify:\/\/shop_images\/Pinecone.png",
+            "brand_name": "Pinecone"
+          }
+        },
+        "brand_VJDxLU": {
+          "type": "brand",
+          "settings": {
+            "display_label": false,
+            "brand_image": "shopify:\/\/shop_images\/Link_Roaster.png",
+            "brand_name": "Link Roaster"
+          }
+        }
+      },
+      "block_order": [
+        "brand_997Kth",
+        "brand_GWQmm4",
+        "brand_XhME8Q",
+        "brand_F7nGJz",
+        "brand_n3f7Th",
+        "brand_UBCcGQ",
+        "brand_qR3CWd",
+        "brand_4wpg3k",
+        "brand_wJHijH",
+        "brand_VJDxLU"
+      ],
+      "settings": {
+        "heading": "Featured Brands",
+        "subheading": "Browse a full range of products from leading brands."
+      }
     }
   },
   "order": [
-    "index_banner_pyJB64"
+    "index_banner_pyJB64",
+    "index_explore_NnfyaQ",
+    "index_brands_gGPWB4"
   ]
 }

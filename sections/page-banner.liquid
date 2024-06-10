@@ -3,9 +3,12 @@ style="background-image: url('{{ section.settings.image |  image_url }}');">
 <div class="container">
     <div class="banner-cntnt">
         <div class="banner-hed">
-            <h1> {{ page.title }} </h1>
-            <p> {{ section.settings.banner_text }} </p>
-        </div>
+            {% if section.settings.show_custom_title and section.settings.custom_title != blank %}
+                <h1> {{ section.settings.custom_title }} </h1>
+            {% else %}
+                <h1> {{ page.title }} </h1>
+            {% endif %}
+        </div> 
     </div>
     <div class="banner-logo">
         {% render 'image-snippet-np', image: settings.banner_logo , imageURL: true, lazyload: 'eager'  %}
@@ -18,15 +21,21 @@ style="background-image: url('{{ section.settings.image |  image_url }}');">
         "name": "Page Banner",
         "settings": [
             {
+                "type": "checkbox",
+                "id": "show_custom_title",
+                "label": "Show Custom Title",
+                "default": false
+            },
+            {
+                "type": "html",
+                "id": "custom_title",
+                "label": "Custom Title",
+                "default": " Learn <br> More About US"
+            },
+            {
                 "type": "image_picker",
                 "id": "image",
                 "label": "Image"
-            },
-            {
-                "type": "inline_richtext",
-                "id": "banner_text",
-                "label": "Banner Text",
-                "default" :"We provide superior coffee equipment, decades of experience and genuine service and support to your coffee business."
             }
         ],
         "presets": [

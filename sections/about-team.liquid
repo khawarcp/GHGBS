@@ -1,0 +1,77 @@
+<section id="meet-team">
+    <div class="container">
+        {% if section.settings.heading != blank %}                    
+            <h2> {{ section.settings.heading }} </h2>
+        {% endif %}
+    </div>
+    <div class=" owl-carousel  meet-team-prnt owl-theme">
+        {% for block in section.blocks %}
+            {% case block.type %}
+                   {% when 'team_member' %}
+                        {% if block.settings.name != blank %} 
+                            <div class="item">
+                                <div class="our-team">
+                                    {% render 'image-snippet', image: block.settings.image, lazyload: 'lazy', width: '282', height: '320' %}
+                                    <div class="name-links">
+                                        <div class="position">
+                                            <h4> {{ block.settings.name }} </h4>
+                                            <h6> {{ block.settings.post }} </h6>
+                                        </div>
+                                        <a href="{{ block.settings.linkedink_url |  default : "#." }}"> {% render 'image-snippet-np', image: 'team-linkdn.svg', alt: "linkdin-icon" , assetURL: true, lazyload: 'lazy'  %} </a>                                        
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+         {% endcase %}
+     {% endfor %}
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Team Members",
+        "settings": [
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading",
+                "default": "Meet The Team"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "team_member",
+                "name": "Team Member",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "name",
+                        "label": "Name",
+                        "default": "Gary Horne"
+                    },
+                    {
+                        "type": "text",
+                        "id": "post",
+                        "label": "Designation",
+                        "default": "President"
+                    },
+                    {
+                        "type": "url",
+                        "id": "linkedink_url",
+                        "label": "LinkedIn Profile Link"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Team Members"
+            }
+        ]
+    }
+{% endschema %}

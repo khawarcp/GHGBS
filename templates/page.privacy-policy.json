@@ -1,7 +1,7 @@
 {
   "sections": {
-    "page-banner": {
-      "type": "page-banner",
+    "policy-banner": {
+      "type": "policy-banner",
       "settings": {
         "image": "shopify:\/\/shop_images\/policy-bg.png",
         "banner_text": "We provide superior coffee equipment, decades of experience and genuine service and support to your coffee business."
@@ -14,7 +14,7 @@
     }
   },
   "order": [
-    "page-banner",
+    "policy-banner",
     "policy-content"
   ]
 }

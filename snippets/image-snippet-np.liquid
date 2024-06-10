@@ -1,7 +1,19 @@
 {% if image != blank %}
+    {% liquid
+        if width
+            assign image_width = width
+        else 
+            assign image_width = image.width
+        endif
+        if height
+            assign image_height = height
+        else 
+            assign image_height = image.height
+        endif
+    %}
     <img 
         {% if imageURL %}            
-            src="{{ image | image_url }}"                   
+            src="{{ image | image_url: width: image_width, height: image_height }}"                   
         {% endif %}
         {% if assetURL %}            
             src="{{ image | asset_url }}"                   
@@ -12,7 +24,7 @@
         alt="{{ image.alt }}"             
     {% endif %}
     {% if lazyload %} loading="{{ lazyload }}"{% endif %} 
-        width="{{ image.width }}" 
-        height="{{ image.height }}"     
+        width="{{ image_width }}" 
+        height="{{ image_height }}" 
      {% if class %} class="{{ class }}" {% endif %}>
 {% endif %}

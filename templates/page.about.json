@@ -3,10 +3,155 @@
     "page-banner": {
       "type": "page-banner",
       "settings": {
+        "show_custom_title": true,
+        "custom_title": "Learn <br> More About US",
+        "image": "shopify:\/\/shop_images\/about-bg.png"
+      }
+    },
+    "about-content": {
+      "type": "about-content",
+      "blocks": {
+        "feature_EYJxrh": {
+          "type": "feature",
+          "settings": {
+            "heading": "Access to All",
+            "text": "We believe everyone should be able to access the most innovative grinding and brewing equipment our industry has to offer.",
+            "image": "shopify:\/\/shop_images\/coffee.svg"
+          }
+        },
+        "feature_gjcgr8": {
+          "type": "feature",
+          "settings": {
+            "heading": "Industry Experience",
+            "text": "With many years of experience, we understand the demands in the coffee industry.",
+            "image": "shopify:\/\/shop_images\/briefcase.svg"
+          }
+        },
+        "feature_jJ3Lt3": {
+          "type": "feature",
+          "settings": {
+            "heading": "Quality Equipment",
+            "text": "We strive to provide you with the best equipment for your brewing experience.",
+            "image": "shopify:\/\/shop_images\/search-icon.png"
+          }
+        }
+      },
+      "block_order": [
+        "feature_EYJxrh",
+        "feature_gjcgr8",
+        "feature_jJ3Lt3"
+      ],
+      "settings": {
+        "heading": "About Grinder & Bewering Solutions",
+        "image": "shopify:\/\/shop_images\/img-aboutus-bg.png",
+        "show_custom_content": false,
+        "page_content": ""
+      }
+    },
+    "about_team_h6LpAk": {
+      "type": "about-team",
+      "blocks": {
+        "team_member_bEHNRq": {
+          "type": "team_member",
+          "settings": {
+            "name": "Gary Horne",
+            "post": "President",
+            "linkedink_url": "",
+            "image": "shopify:\/\/shop_images\/Gary_Horne.png"
+          }
+        },
+        "team_member_e3MXje": {
+          "type": "team_member",
+          "settings": {
+            "name": "Travis Jones",
+            "post": "Sales Manager",
+            "linkedink_url": "",
+            "image": "shopify:\/\/shop_images\/Travis_Jones.png"
+          }
+        },
+        "team_member_iiR7Tb": {
+          "type": "team_member",
+          "settings": {
+            "name": "Debbie Hatch",
+            "post": "Customer Support Manager",
+            "linkedink_url": "",
+            "image": "shopify:\/\/shop_images\/Debbie_Hatch.png"
+          }
+        },
+        "team_member_TtVKPe": {
+          "type": "team_member",
+          "settings": {
+            "name": "Tom Rolleri",
+            "post": "Sales Director",
+            "linkedink_url": "",
+            "image": "shopify:\/\/shop_images\/Tom_Rolleri.png"
+          }
+        },
+        "team_member_eL47te": {
+          "type": "team_member",
+          "settings": {
+            "name": "Mark Leatherwood",
+            "post": "Tech Specialist",
+            "linkedink_url": "",
+            "image": "shopify:\/\/shop_images\/marksized.jpg"
+          }
+        },
+        "team_member_JEDeEh": {
+          "type": "team_member",
+          "settings": {
+            "name": "Josh Kimbrough",
+            "post": "Sales & Marketing",
+            "linkedink_url": "",
+            "image": "shopify:\/\/shop_images\/DSC_0550_2.jpg"
+          }
+        },
+        "team_member_eEw7rQ": {
+          "type": "team_member",
+          "settings": {
+            "name": "Amanda Gardner",
+            "post": "Controller",
+            "linkedink_url": "",
+            "image": "shopify:\/\/shop_images\/ok.jpg"
+          }
+        },
+        "team_member_NF9mgk": {
+          "type": "team_member",
+          "settings": {
+            "name": "Anthony Truscello",
+            "post": "Procurement Manager",
+            "linkedink_url": "",
+            "image": "shopify:\/\/shop_images\/tonysized.jpg"
+          }
+        },
+        "team_member_jRCRDm": {
+          "type": "team_member",
+          "settings": {
+            "name": "Matti Gowl",
+            "post": "Warehouse Manager",
+            "linkedink_url": "",
+            "image": "shopify:\/\/shop_images\/DSC_0555_2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "team_member_bEHNRq",
+        "team_member_e3MXje",
+        "team_member_iiR7Tb",
+        "team_member_TtVKPe",
+        "team_member_eL47te",
+        "team_member_JEDeEh",
+        "team_member_eEw7rQ",
+        "team_member_NF9mgk",
+        "team_member_jRCRDm"
+      ],
+      "settings": {
+        "heading": "Meet The Team"
       }
     }
   },
   "order": [
-    "page-banner"
+    "page-banner",
+    "about-content",
+    "about_team_h6LpAk"
   ]
 }

@@ -58,12 +58,31 @@ IMPLEMENTATION NOTE: the header in Focal is pretty complex as it allows a lot of
   #shopify-section-{{ section.id }} .header__logo-image {
     max-width: {{ section.settings.mobile_logo_max_width }}px;
   }
+  
+  {% unless request.page_type == 'index' %}
+  #shopify-section-{{ section.id }} .header__logo-image {
+    max-width: {{ section.settings.other_mobile_logo_max_width }}px;
+  }
+  .header__wrapper {
+        padding: calc(0 - var(--reduce-header-padding)* 6px) 0;
+    }
+{% endunless %}
 
   @media screen and (min-width: 741px) {
     #shopify-section-{{ section.id }} .header__logo-image {
       max-width: {{ section.settings.logo_max_width }}px;
     }
+
+    {% unless request.page_type == 'index' %}
+      #shopify-section-{{ section.id }} .header__logo-image {
+      max-width: {{ section.settings.other_logo_max_width }}px;
+    }
+
+    {% endunless %}
+
   }
+
+  
 
   @media screen and (min-width: 1200px) {
     {%- if section.settings.header_layout == 'logo_left_navigation_inline' -%}
@@ -154,6 +173,7 @@ IMPLEMENTATION NOTE: the header in Focal is pretty complex as it allows a lot of
 
       <!-- LOGO PART -->
       {%- capture logo -%}
+      {% if request.page_type == 'index' %}
         <a class="header__logo-link" href="{{ routes.root_url }}">
           {%- if section.settings.logo != blank -%}
             {%- assign logo_size = section.settings.logo_max_width | at_least: section.settings.mobile_logo_max_width | times: 2 %}
@@ -167,6 +187,21 @@ IMPLEMENTATION NOTE: the header in Focal is pretty complex as it allows a lot of
             <span class="header__logo-text heading h5">{{ shop.name }}</span>
           {%- endif -%}
         </a>
+        {% else %}
+        <a class="header__logo-link" href="{{ routes.root_url }}">
+          {%- if section.settings.other_logo != blank -%}
+            {%- assign logo_size = section.settings.other_logo_max_width | at_least: section.settings.other_mobile_logo_max_width | times: 2 %}
+            <span class="visually-hidden">{{ shop.name }}</span>
+            <img class="header__logo-image" width="{{ section.settings.logo.width }}" height="{{ section.settings.other_logo.height }}" src="{{ section.settings.other_logo | image_url: width: logo_size }}" alt="{{ section.settings.other_logo.alt | escape }}">
+
+            {%- if request.page_type == 'index' and section.settings.enable_transparent_header and section.settings.transparent_logo != blank -%}
+              <img class="header__logo-image header__logo-image--transparent" width="{{ section.settings.transparent_logo.width }}" height="{{ section.settings.transparent_logo.height }}" src="{{ section.settings.transparent_logo | image_url: width: logo_size }}" alt="{{ section.settings.transparent_logo.alt | escape }}">
+            {%- endif -%}
+          {%- else -%}
+            <span class="header__logo-text heading h5">{{ shop.name }}</span>
+          {%- endif -%}
+        </a>
+        {% endif %}
       {%- endcapture -%}
 
       {%- if request.page_type == 'index' -%}
@@ -429,6 +464,31 @@ SEARCH DRAWER
       "step": 5,
       "unit": "px",
       "label": "Mobile image width",
+      "default": 100
+    },
+    {
+      "type": "image_picker",
+      "id": "other_logo",
+      "label": "Other Pages Image"
+    },
+    {
+      "type": "range",
+      "id": "other_logo_max_width",
+      "min": 40,
+      "max": 300,
+      "step": 5,
+      "unit": "px",
+      "label": "Other Pages Image width",
+      "default": 110
+    },
+    {
+      "type": "range",
+      "id": "other_mobile_logo_max_width",
+      "min": 25,
+      "max": 170,
+      "step": 5,
+      "unit": "px",
+      "label": "Other Pages Mobile image width",
       "default": 100
     },
     {

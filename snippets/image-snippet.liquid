@@ -1,13 +1,25 @@
 {% if image != blank %}
-    <img src="{{ image | image_url }}" 
+    {% liquid
+        if width
+            assign image_width = width
+        else 
+            assign image_width = image.width
+        endif
+        if height
+            assign image_height = height
+        else 
+            assign image_height = image.height
+        endif
+    %}
+    <img  src="{{ image | image_url: width: image_width, height: image_height }}"
     {% if alt %}
         alt="{{ alt }}"
         {% else %}
         alt="{{ image.alt }}"             
     {% endif %}
     {% if lazyload %} loading="{{ lazyload }}"{% endif %} 
-        width="{{ image.width }}" 
-        height="{{ image.height }}"     
+        width="{{ image_width }}" 
+        height="{{ image_height }}" 
      {% if class %} class="{{ class }}" {% endif %}>
 {% else %}
     {{ 'image' | placeholder_svg_tag }}
