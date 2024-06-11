@@ -1,0 +1,183 @@
+<section id="contact-us">
+    <div class="container">
+        {% if section.settings.heading != blank %}                    
+            <h2> {{ section.settings.heading }} </h2>
+        {% endif %}
+        <div class="cntct-parnt flex">
+            <div class="cntct-heading">
+                {% if section.settings.show_custom_content and section.settings.page_content != blank %}
+                    {{ section.settings.page_content }}
+                {% else %}
+                    {{ page.content }}
+                {% endif %}
+                <div class="cntct-nmbrs">
+                    {% if section.settings.phone_number != blank %}
+                    <a href="tel:{{ section.settings.phone_number }}"> {% render 'image-snippet-np', image: 'cntct-call.svg' , assetURL: true, lazyload: 'lazy', alt: 'Call Icon'  %} 
+                       {{ section.settings.phone_number }} </a>
+                    {% endif %}
+                    {% if section.settings.email_address != blank %}
+                        <a href="mailto:{{ section.settings.email_address }}">
+                            {% render 'image-snippet-np', image: 'cntct-mail.svg' , assetURL: true, lazyload: 'lazy', alt: 'Mail Icon'  %}
+                        {{ section.settings.email_address }}</a>
+                    {% endif %}
+                    {% if section.settings.address != blank %}
+                    <a href="{{ section.settings.map |  default: "#." }}" target="_blank"> {% render 'image-snippet-np', image: 'cntct-location.svg' , assetURL: true, lazyload: 'lazy', alt: 'Location Icon'  %}  {{ section.settings.address }} </a>
+                    {% endif %}
+                    <div class="cntct-social-lnks flex">
+                        {% if settings.social_facebook != blank %}
+                            <a href="{{ settings.social_facebook }}"> {% render 'image-snippet-np', image: 'cn-fb.svg' , assetURL: true, lazyload: 'lazy', alt: 'Facebook Icon'  %} </a>
+                        {% endif %}
+                        {% if settings.social_youtube != blank %}
+                            <a href="{{ settings.social_youtube }}"> {% render 'image-snippet-np', image: 'cn-yt.svg' , assetURL: true, lazyload: 'lazy', alt: 'Youtube Icon'  %} </a>
+                        {% endif %}
+                        {% if settings.social_twitter != blank %}
+                            <a href="{{ settings.social_twitter }}"> {% render 'image-snippet-np', image: 'cn-x.svg' , assetURL: true, lazyload: 'lazy', alt: 'Twiter X Icon'  %} </a>
+                        {% endif %}
+                        {% if settings.social_linkedin != blank %}
+                            <a href="{{ settings.social_linkedin }}"> {% render 'image-snippet-np', image: 'cn-ld.svg' , assetURL: true, lazyload: 'lazy', alt: 'LinkedIn Icon'  %} </a>
+                        {% endif %}
+                    </div>
+
+                    {% render 'image-snippet', image: section.settings.image, lazyload: 'lazy', class: 'cnntctus-abs', width: '215', height: '175' %}
+                </div>
+            </div>
+            <div class="cntct-form">
+                {%- form 'contact' -%}
+                    {%- if form.posted_successfully? -%}
+                        <div class="banner banner--success form__banner">
+                          <span class="banner__ribbon">{% render 'icon' with 'form-success' %}</span>
+                          <p class="banner__content">{{ 'contact.form.successfully_sent' | t }}</p>
+                        </div>
+                      {%- endif -%}
+          
+                      {%- if form.errors -%}
+                        <div class="form__banner banner banner--error">
+                          <span class="banner__ribbon">{% render 'icon' with 'form-error' %}</span>
+          
+                          <div class="banner__content">
+                            {{- form.errors | default_errors -}}
+                          </div>
+                        </div>
+                      {%- endif -%}
+                    <div class="fname flex">
+                        <div class="inqury-type inq-drop flex">
+                            <label for="Form-{{ section.id }}-type"> Enquiry Type</label>
+                            <select  name="contact[enquiry_type]" required id="Form-{{ section.id }}-type">
+                                <option value="">Select Option</option>
+                                <option value="Machine" >Machine</option>
+                                <option value="Parts">Parts</option>
+                            </select>
+                        </div>
+                        <div class="cmpny-nme flex">
+                            <label for="Form-{{ section.id }}-company"> Company</label>
+                            <input type="text" id="Form-{{ section.id }}-company" placeholder="Company" name="contact[company]" value="{{ form.company }}">
+                        </div>
+                    </div>
+                    <div class="fname flex">
+                        <div class="inqury-type flex">
+                            <label for="Form-{{ section.id }}-name"> Name</label>
+                            <input id="Form-{{ section.id }}-name" type="text" placeholder="Full Name" name="contact[name]"  value="{{ form.name }}" required>
+                        </div>
+                        <div class="cmpny-nme flex">
+                            <label for="Form-{{ section.id }}-name">email</label>
+                            <input type="email" id="Form-{{ section.id }}-email" placeholder="{{ 'contact.form.email' | t }}" name="contact[email]" required value="{% if form.email %} {{ form.email }} {% else %} {{ customer.email }}{% endif %}"> 
+                        </div>
+                    </div>
+                    <div class="fname flex">
+                        <div class="inqury-type flex">
+                            <label for="Form-{{ section.id }}-phone_number">Phone</label>
+                            <input type="tel" id="Form-{{ section.id }}-phone_number" placeholder="Phone Number" maxlength="10"  value="{% if form.phone_number %} {{ form.phone_number }}{% endif %}" name="contact[phone_number]" required>
+                        </div>
+                        <div class="cmpny-nme flex">
+                            <label for="Form-{{ section.id }}-model_number">Model Number</label>
+                            <input type="text" id="Form-{{ section.id }}-model_number" placeholder="Model Number" name="contact[model_number]"  value="{{ form.model_number }}">
+                        </div>
+                    </div>
+                    <div class="fname flex">
+                        <div class="sku-product flex">
+                            <label for="Form-{{ section.id }}-sku-product"> SKU/ Product Number</label>
+                            <input type="text" id="Form-{{ section.id }}-sku-product" placeholder="SKU/ Product Number"  name="contact[product_number]" value="{{ form.product_number }}">
+                        </div>
+                    </div>
+                    <div class="fname flex">
+                        <div class="sku-product flex">
+                            <label for="Form-{{ section.id }}-cntct-area"> Message</label>
+                            <textarea name="contact[body]" id="Form-{{ section.id }}-cntct-area"
+                                placeholder="Discuss anything with us that you want" required>{{- form.body -}}</textarea>
+
+                        </div>
+                    </div>
+                    <div class="submit-btn">
+                        <button type="submit" > Submit</button>
+                    </div>
+
+                {%- endform -%}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Content",
+        "settings": [
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading",
+                "default": "Contact Us"
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_custom_content",
+                "label": "Show Custom Content",
+                "default": false
+            },
+            {
+                "type": "richtext",
+                "id": "page_content",
+                "label": "Page Content"
+            },
+            {
+                "type": "header",
+                "content": "Phone Number"
+            },
+            {
+                "type": "text",
+                "id": "phone_number",
+                "label": "Number",
+                "default": "919-383-076"
+            },
+            {
+                "type": "header",
+                "content": "Email Address"
+            },
+            {
+                "type": "text",
+                "id": "email_address",
+                "label": "Email",
+                "default": "support@ghgbs.com"
+            },
+            {
+                "type": "header",
+                "content": "Location"
+            },
+            {
+                "type": "text",
+                "id": "address",
+                "label": "Address",
+                "default": "GH Grinding & Brewing Solutions, 4225 Bennett Memorial Road, Durham."
+            },
+            {
+                "type": "url",
+                "id": "map",
+                "label": "Map URL"
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,131 @@
+{% liquid
+    assign blog = blogs[section.settings.blog] 
+    if section.settings.button_url != blank
+     assign button_url = section.settings.button_url
+    else
+     assign button_url = blog.url
+    endif
+
+    assign articles_count = false
+    for article in blog.articles
+        if blog.articles_count > 3
+          assign articles_count = true
+        endif
+    endfor
+%}
+
+{% style %}
+   {% if articles_count %}
+        .hme-blog-dta {
+            gap : 10px;
+        }
+    {% endif %}
+{% endstyle %}
+
+<section class="home-blog">
+    <div class="container">
+        <div class="home-blog-content">
+            <div class="hme-blog-head flex justify-between align-center">
+                {% if section.settings.heading != blank %}                    
+                    <h2> {{ section.settings.heading }} </h2>
+                {% endif %}
+                {% render 'anchor-snippet', image: true, button_text: section.settings.button_text, button_url: button_url, class: 'btn-primary flex align-center justify-center gap-10' %}
+            </div>
+
+            <div class="hme-blog-dta flex justify-between">
+                {% for article in blog.articles limit: section.settings.articles_count%}                    
+                    {%- render 'custom-article-item', article: article show_date: section.settings.show_date, show_author: section.settings.show_author, show_category: section.settings.show_category, show_excerpt: section.settings.show_excerpt -%}
+                    {%- else -%}
+                        {%- for i in (1..section.settings.articles_count) -%}
+                            <div {% if settings.stagger_blog_posts_apparition %}reveal{% endif %} class="article-item">
+                            <div class="article-item__image-container">
+                                <div class="placeholder-image" style="padding-bottom: 75%">
+                                {{ 'image' | placeholder_svg_tag }}
+                                </div>
+                            </div>
+
+                            <div class="article-item__content">
+                                {%- if section.settings.show_category -%}
+                                <p class="article-item__category heading heading--xsmall">{{ 'general.onboarding.blog_post_category' | t }}</p>
+                                {%- endif -%}
+
+                                <h3 class="article-item__title heading h4">{{ 'general.onboarding.blog_post_title' | t }}</h3>
+                            </div>
+                            </div>
+                        {%- endfor -%}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name" : "Blogs",
+        "settings": [
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading",
+                "default": "Latest News & Blogs"
+            },
+            {
+                "type": "blog",
+                "id": "blog",
+                "label": "Blog"
+            },
+            {
+                "type": "range",
+                "id": "articles_count",
+                "label": "Blog posts to show",
+                "info": "Layout automatically adapts based on the number of blog posts.",
+                "min": 1,
+                "max": 4,
+                "step": 1,
+                "default": 3
+            },
+            {
+                "type": "checkbox",
+                "id": "show_category",
+                "label": "Show category",
+                "info": "The first article's tag will be shown as category.",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "show_date",
+                "label": "Show Date",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "show_author",
+                "label": "Show Author",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "show_excerpt",
+                "label": "Show excerpt",
+                "info": "Change excerpts by editing your blog posts. [Learn more](https://help.shopify.com/en/manual/online-store/blogs/writing-blogs#display-an-excerpt-from-a-blog-post)",
+                "default": false
+            },
+            {
+                "type": "text",
+                "id": "button_text",
+                "label": "Button Text",
+                "default": "View all Blogs"
+            },
+            {
+                "type": "url",
+                "id": "button_url",
+                "label": "Button URL"
+            }
+        ],
+        "presets": [
+            {
+                "name" : "Blogs"
+             }
+        ]
+    }
+{% endschema %}

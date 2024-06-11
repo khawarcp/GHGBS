@@ -1,0 +1,85 @@
+<section class="parts">
+    <div class="container">
+        <div class="parts-content flex justify-between gap-32">
+
+        {% for block in section.blocks %}
+            {% case block.type %}
+                   {% when 'block' %}
+                        {% if block.settings.heading != blank %} 
+                            <div class="{{ block.settings.class }} flex justify-between">
+                                <div class="p-model-text">
+                                    {% if block.settings.heading != blank %}                    
+                                        <h2> {{ block.settings.heading }} </h2>
+                                    {% endif %}
+                                    {% if block.settings.subheading != blank %}                    
+                                        <p> {{ block.settings.subheading }} </p>
+                                    {% endif %}
+                
+                                    {% render 'anchor-snippet', image: true, button_text: block.settings.button_text, button_url: block.settings.button_url, class: 'btn-primary flex align-center justify-center gap-10' %}
+                                </div>
+                
+                                <div class="p-model-img">
+                                    {% render 'image-snippet', image: block.settings.image, lazyload: 'lazy' %}
+                                </div>
+                            </div>
+                        {% endif %}
+         {% endcase %}
+     {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Collection Blocks",
+        "settings": [],
+        "blocks": [
+            {
+                "type": "block",
+                "name": "Block",
+                "limit": 2,
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "class",
+                        "label": "Class",
+                        "default": "p-model"
+                    },
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "Heading",
+                        "default": "Parts By Model"
+                    },
+                    {
+                        "type": "inline_richtext",
+                        "id": "subheading",
+                        "label": "Subheading",
+                        "default": "Our philosophy of support and customer care is very important to us."
+                    },
+                    {
+                        "type": "text",
+                        "id": "button_text",
+                        "label": "Button Text",
+                        "default": "Shop Now"
+                    },
+                    {
+                        "type": "url",
+                        "id": "button_url",
+                        "label": "Button URL"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Collection Blocks"
+            }
+        ]
+    }
+{% endschema %}

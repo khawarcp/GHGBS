@@ -43,6 +43,24 @@ predictive-search-drawer#search-drawer {
     border-radius: 10px;
 }
 
+.article-item__excerpt {
+    margin-block-start: 10px;
+}
+
+.article-item__category {
+    background-color: var(--8DB1B5, #8DB1B5);
+    color: #fff;
+    border: 1px solid var(--8DB1B5, #8DB1B5);
+    padding: 8px;
+    border-radius: 46px;
+    font-family: 'Univers';
+    font-size: 11px;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    margin-top: 10px;
+}
+
 @media screen and (min-width: 1200px) {
     store-header .container {
         padding: 0;

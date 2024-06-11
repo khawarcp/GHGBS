@@ -1,0 +1,33 @@
+<div class="blog-img">
+    <a href="{{ article.url }}">
+        {% render 'image-snippet', image: article.image.src, lazyload: 'lazy', width: '394',  height: '239' %}
+        {% if show_date and show_author %}                                                    
+        <p>
+            {% if show_date %}
+                {{ article.published_at | date: "%b %d, %Y" }} &#124;
+            {% endif %}
+            {% if show_author %}
+                {{ article.author }}                                
+            {% endif %}
+            </p>
+        {% endif %}
+        <h2> {{ article.title |  escape |  truncatewords: 20 }} </h2>
+        {%- if show_excerpt and article.excerpt_or_content != blank -%}
+            <div class="article-item__excerpt text--small">
+                {{- article.excerpt_or_content | strip_html | truncate: 200 -}}
+            </div>
+            {%- endif -%}
+    </a>
+    {%- if show_category and article.tags.size > 0 -%}
+        {%- assign blog_url_parts = article.url | split: '/' -%}
+        {%- assign blog_url = '' -%}
+    
+        {%- for blog_url_part in blog_url_parts -%}
+            {%- unless forloop.last -%}
+            {%- assign blog_url = blog_url | append: '/' | append: blog_url_part -%}
+            {%- endunless -%}
+        {%- endfor -%}
+    
+        <a href="{{ blog_url | remove_first: '/' }}/tagged/{{ article.tags.first | handle }}" class="article-item__category heading heading--xsmall">{{ article.tags.first }}</a>
+        {%- endif -%}
+</div>

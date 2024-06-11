@@ -1,5 +1,5 @@
 {% if button_text != blank %}    
-<a href="{{ button_url | default: "#" }}" {% if title %} title="{{ title }}" {% endif %} {% if class %}
+<a href="{{ button_url | default: "#." }}" {% if title %} title="{{ title }}" {% endif %} {% if class %}
         class="{{ class }}"
     {% endif %}> <p>{{ button_text }}</p> 
     {% if image %}

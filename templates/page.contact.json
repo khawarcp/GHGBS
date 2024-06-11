@@ -7,9 +7,23 @@
         "custom_title": "Contact <br> With US",
         "image": "shopify:\/\/shop_images\/contact-bg.png"
       }
+    },
+    "contact-content": {
+      "type": "contact-content",
+      "settings": {
+        "heading": "Contact Us",
+        "image": "shopify:\/\/shop_images\/banner_Bottom_Image.png",
+        "show_custom_content": false,
+        "page_content": "",
+        "phone_number": "919-383-076",
+        "email_address": "support@ghgbs.com",
+        "address": "GH Grinding & Brewing Solutions, 4225 Bennett Memorial Road, Durham.",
+        "map": "https:\/\/maps.app.goo.gl\/Ao8kpCEX6HAhw23s9"
+      }
     }
   },
   "order": [
-    "page-banner"
+    "page-banner",
+    "contact-content"
   ]
 }

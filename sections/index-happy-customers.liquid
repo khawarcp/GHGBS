@@ -1,0 +1,110 @@
+<section class="happy">
+
+<div class="happy-content flex justify-between align-center">
+    <div class="happy-img">
+        {% render 'image-snippet', image: section.settings.image, lazyload: 'lazy' %}
+    </div>
+
+    <div class="happy-text">
+        {% if section.settings.heading != blank %}                    
+            <h2> {{ section.settings.heading }} </h2>
+        {% endif %}
+        <div class="owl-slider">
+            <div id="customercarousel" class="customer owl-carousel">
+                {% for block in section.blocks %}
+                    {% case block.type %}
+                           {% when 'block' %}
+                                {% if block.settings.comment != blank %} 
+                                    <div class="item">
+                                        <div class="happy-cstmr-text">
+                                            <h3> {{ block.settings.heading }} </h3>
+                                                {{ block.settings.comment }}
+                                            <div class="hapy-ceo flex">
+                                                <div class="ceo-img">
+                                                    {% render 'image-snippet', image: block.settings.image, lazyload: 'lazy', height: '60', width: '60' %}
+                                                </div>
+                                                <div class="ceo-txt">
+                                                    {% if block.settings.name != blank %}                    
+                                                        <h4> {{ block.settings.name }} </h4>
+                                                    {% endif %}
+                                                    {% if block.settings.post != blank %}                    
+                                                        <p> {{ block.settings.post }} </p>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                 {% endcase %}
+             {% endfor %}
+            </div>
+
+            <div class="counter">
+                <span id="current-slide">01</span> <span id="total-slides">04</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
+
+{% schema %}
+    {
+        "name": "Happy Customers",
+        "settings": [
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading",
+                "default": "Our Happy Customers"
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "block",
+                "name": "Block",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "Heading",
+                        "default": "Perfect Grind from Comandante MK4"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "comment",
+                        "label": "Comment",
+                        "default": "<p>I get a very uniform grind from this product. I notice that the coffee tastes better also. This is a really nice grinder. Solid, well built, smooth grind settings. Great folks to deal with. They have a ton of coffee gear at reasonable prices too.</p>"
+                    },
+                    {
+                        "type": "text",
+                        "id": "name",
+                        "label": "Name",
+                        "default": "Savannah Nguyen"
+                    },
+                    {
+                        "type": "text",
+                        "id": "post",
+                        "label": "Designation",
+                        "default" : "CEO Sans Brothers"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Happy Customers"
+            }
+        ]
+    }
+{% endschema %}

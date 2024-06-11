@@ -56,7 +56,8 @@
           "settings": {
             "display_label": true,
             "brand_image": "shopify:\/\/shop_images\/Mahlkonig_78bad704-427b-4183-80c0-4e3156c5cfca.png",
-            "brand_name": "Mahlkonig"
+            "brand_name": "Mahlkonig",
+            "url": "shopify:\/\/collections\/mahlkonig"
           }
         },
         "brand_GWQmm4": {
@@ -64,7 +65,8 @@
           "settings": {
             "display_label": false,
             "brand_image": "shopify:\/\/shop_images\/Tone_59e73bc6-abad-418a-b32c-829a4785ab75.png",
-            "brand_name": "Tone"
+            "brand_name": "Tone",
+            "url": "shopify:\/\/collections\/tone"
           }
         },
         "brand_XhME8Q": {
@@ -72,7 +74,8 @@
           "settings": {
             "display_label": false,
             "brand_image": "shopify:\/\/shop_images\/Anfim_46b75f95-5be2-4b83-af9d-89696ec87eca.png",
-            "brand_name": "Anfim"
+            "brand_name": "Anfim",
+            "url": "shopify:\/\/collections\/anfim"
           }
         },
         "brand_F7nGJz": {
@@ -80,7 +83,8 @@
           "settings": {
             "display_label": false,
             "brand_image": "shopify:\/\/shop_images\/PUQ.png",
-            "brand_name": "PUQ Press"
+            "brand_name": "PUQ Press",
+            "url": "shopify:\/\/collections\/puqpress"
           }
         },
         "brand_n3f7Th": {
@@ -88,7 +92,8 @@
           "settings": {
             "display_label": false,
             "brand_image": "shopify:\/\/shop_images\/Etzinger.png",
-            "brand_name": "Etzinger"
+            "brand_name": "Etzinger",
+            "url": "shopify:\/\/collections\/etzinger"
           }
         },
         "brand_UBCcGQ": {
@@ -96,7 +101,8 @@
           "settings": {
             "display_label": false,
             "brand_image": "shopify:\/\/shop_images\/Bentwood.png",
-            "brand_name": "Bentwood"
+            "brand_name": "Bentwood",
+            "url": "shopify:\/\/collections\/bentwood"
           }
         },
         "brand_qR3CWd": {
@@ -104,7 +110,8 @@
           "settings": {
             "display_label": false,
             "brand_image": "shopify:\/\/shop_images\/Ceado.png",
-            "brand_name": "Ceado"
+            "brand_name": "Ceado",
+            "url": "shopify:\/\/collections\/ceado-coffee-grinders"
           }
         },
         "brand_4wpg3k": {
@@ -112,7 +119,8 @@
           "settings": {
             "display_label": false,
             "brand_image": "shopify:\/\/shop_images\/Newco.png",
-            "brand_name": "Newco"
+            "brand_name": "Newco",
+            "url": "shopify:\/\/collections\/newco"
           }
         },
         "brand_wJHijH": {
@@ -120,7 +128,8 @@
           "settings": {
             "display_label": false,
             "brand_image": "shopify:\/\/shop_images\/Pinecone.png",
-            "brand_name": "Pinecone"
+            "brand_name": "Pinecone",
+            "url": "shopify:\/\/collections\/pinecone"
           }
         },
         "brand_VJDxLU": {
@@ -128,7 +137,8 @@
           "settings": {
             "display_label": false,
             "brand_image": "shopify:\/\/shop_images\/Link_Roaster.png",
-            "brand_name": "Link Roaster"
+            "brand_name": "Link Roaster",
+            "url": "shopify:\/\/collections\/link-roaster"
           }
         }
       },
@@ -148,11 +158,203 @@
         "heading": "Featured Brands",
         "subheading": "Browse a full range of products from leading brands."
       }
+    },
+    "index_categories_bcRtJ8": {
+      "type": "index-categories",
+      "blocks": {
+        "category_kPxJ8h": {
+          "type": "category",
+          "settings": {
+            "title": "Grinders",
+            "percentage": "07% OFF",
+            "image": "shopify:\/\/shop_images\/home-catgory-img.png"
+          }
+        },
+        "category_xhPznL": {
+          "type": "category",
+          "settings": {
+            "title": "Commercial Brewers",
+            "percentage": "12% OFF",
+            "image": "shopify:\/\/shop_images\/Commercial_Brewers.jpg"
+          }
+        },
+        "category_hkfbGB": {
+          "type": "category",
+          "settings": {
+            "title": "Home Solutions",
+            "percentage": " 09% OFF",
+            "image": "shopify:\/\/shop_images\/Home_Solutions.jpg"
+          }
+        },
+        "category_rgYqGU": {
+          "type": "category",
+          "settings": {
+            "title": "Burrs",
+            "percentage": "07% OFF",
+            "image": "shopify:\/\/shop_images\/Burrs_a12b1f62-3f40-4e19-932d-52fa64be7ca1.jpg"
+          }
+        },
+        "category_8t8G6Q": {
+          "type": "category",
+          "settings": {
+            "title": "Parts",
+            "percentage": "07% OFF",
+            "image": "shopify:\/\/shop_images\/Parts_9a49154d-93ad-4ce7-9067-7b6114ac0478.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "category_kPxJ8h",
+        "category_xhPznL",
+        "category_hkfbGB",
+        "category_rgYqGU",
+        "category_8t8G6Q"
+      ],
+      "settings": {
+        "heading": "Featured Categories",
+        "subheading": "Browse a full range of products from leading Categories."
+      }
+    },
+    "index_best_sellers_U6PTj7": {
+      "type": "index-best-sellers",
+      "settings": {
+      }
+    },
+    "index_collection_blocks_PNTcm9": {
+      "type": "index-collection-blocks",
+      "blocks": {
+        "block_XdzAgr": {
+          "type": "block",
+          "settings": {
+            "class": "p-model",
+            "heading": "Parts By Model",
+            "subheading": "Our philosophy of support and customer care is very important to us.",
+            "button_text": "Accessories",
+            "button_url": "shopify:\/\/collections\/parts-by-model",
+            "image": "shopify:\/\/shop_images\/parts-img.png"
+          }
+        },
+        "block_LT8nwx": {
+          "type": "block",
+          "settings": {
+            "class": "mahkong",
+            "heading": "Mahlkönig Products",
+            "subheading": "Mahlkönig is the first choice of baristas from all around the world.",
+            "button_text": "Shop Now",
+            "button_url": "shopify:\/\/collections\/mahlkonig",
+            "image": "shopify:\/\/shop_images\/mahk-product-img.png"
+          }
+        }
+      },
+      "block_order": [
+        "block_XdzAgr",
+        "block_LT8nwx"
+      ],
+      "settings": {
+      }
+    },
+    "index_happy_customers_8DrHxj": {
+      "type": "index-happy-customers",
+      "blocks": {
+        "block_MEYcMP": {
+          "type": "block",
+          "settings": {
+            "heading": "Perfect Grind from Comandante MK4",
+            "comment": "<p>I get a very uniform grind from this product. I notice that the coffee tastes better also. This is a really nice grinder. Solid, well built, smooth grind settings. Great folks to deal with. They have a ton of coffee gear at reasonable prices too.<\/p>",
+            "name": "Savannah Nguyen",
+            "post": "CEO Sans Brothers",
+            "image": "shopify:\/\/shop_images\/Customer_Image.png"
+          }
+        },
+        "block_xKJTet": {
+          "type": "block",
+          "settings": {
+            "heading": "Perfect Grind from Comandante MK4",
+            "comment": "<p>I get a very uniform grind from this product. I notice that the coffee tastes better also. This is a really nice grinder. Solid, well built, smooth grind settings. Great folks to deal with. They have a ton of coffee gear at reasonable prices too.<\/p>",
+            "name": "Savannah Nguyen",
+            "post": "CEO Sans Brothers",
+            "image": "shopify:\/\/shop_images\/Customer_Image.png"
+          }
+        },
+        "block_Jd7KgF": {
+          "type": "block",
+          "settings": {
+            "heading": "Perfect Grind from Comandante MK4",
+            "comment": "<p>I get a very uniform grind from this product. I notice that the coffee tastes better also. This is a really nice grinder. Solid, well built, smooth grind settings. Great folks to deal with. They have a ton of coffee gear at reasonable prices too.<\/p>",
+            "name": "Savannah Nguyen",
+            "post": "CEO Sans Brothers",
+            "image": "shopify:\/\/shop_images\/Customer_Image.png"
+          }
+        }
+      },
+      "block_order": [
+        "block_MEYcMP",
+        "block_xKJTet",
+        "block_Jd7KgF"
+      ],
+      "settings": {
+        "heading": "Our Happy Customers",
+        "image": "shopify:\/\/shop_images\/customer.png"
+      }
+    },
+    "index_launched_WjVWxG": {
+      "type": "index-launched",
+      "blocks": {
+        "feature_UnLtiY": {
+          "type": "feature",
+          "settings": {
+            "heading": "Industry Experience",
+            "text": "With many years of experience, we understand the demands in the coffee industry.",
+            "image": "shopify:\/\/shop_images\/indstry.svg"
+          }
+        },
+        "feature_6gQTf3": {
+          "type": "feature",
+          "settings": {
+            "heading": "Quality Equipment",
+            "text": "With many years of experience, we understand the demands in the coffee industry.",
+            "image": "shopify:\/\/shop_images\/seting.svg"
+          }
+        }
+      },
+      "block_order": [
+        "feature_UnLtiY",
+        "feature_6gQTf3"
+      ],
+      "settings": {
+        "heading": "Launched in North America April 1st,",
+        "subheading": "we are the distributor for <span class=\"grey\"> Mahlkonig, Tone, Anfim<\/span> &amp; more of the continents <span class=\"grey\">favourite brands.<\/span>",
+        "text": "<p>We are committed to bringing the absolute best grinding and brewing equipment to North America, Canada, and Latin America. Our philosophy of support and customer care is very important to us.<\/p>",
+        "button_text": "more about us",
+        "button_url": "",
+        "main_image": "shopify:\/\/shop_images\/launched.png",
+        "bottom_image": "shopify:\/\/shop_images\/Bottom_Image.png"
+      }
+    },
+    "index_blogs_gfCFtr": {
+      "type": "index-blogs",
+      "settings": {
+        "heading": "Latest News & Blogs",
+        "blog": "news",
+        "articles_count": 3,
+        "show_category": false,
+        "show_date": true,
+        "show_author": true,
+        "show_excerpt": false,
+        "button_text": "View all Blogs",
+        "button_url": ""
+      }
     }
   },
   "order": [
     "index_banner_pyJB64",
     "index_explore_NnfyaQ",
-    "index_brands_gGPWB4"
+    "index_brands_gGPWB4",
+    "index_categories_bcRtJ8",
+    "index_best_sellers_U6PTj7",
+    "index_collection_blocks_PNTcm9",
+    "index_happy_customers_8DrHxj",
+    "index_launched_WjVWxG",
+    "index_blogs_gfCFtr"
   ]
 }

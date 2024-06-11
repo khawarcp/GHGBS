@@ -1,0 +1,95 @@
+<section class="feature-category">
+    <div class="feature-category-cntnt">
+        <div class="tabs category-grind-tab">
+            <div class="grind-tab">
+                {% if section.settings.heading != blank %}                    
+                    <h2> {{ section.settings.heading }} </h2>
+                {% endif %}
+                {% if section.settings.subheading != blank %}                    
+                    <p> {{ section.settings.subheading }} </p>
+                {% endif %}
+                <ul class="tabs-nav">
+                    {% for block in section.blocks %}
+                        {% case block.type %}
+                               {% when 'category' %}
+                                    {% if block.settings.title != blank %} 
+                                        <li><span></span><a href="#tab-{{ forloop.index }}">{{ block.settings.title }}</a>
+                                        {% if block.settings.percentage != blank %}                                            
+                                            <p>
+                                                {{ block.settings.percentage }}
+                                            </p>
+                                        {% endif %}
+                                    </li>
+                                    {% endif %}
+                     {% endcase %}
+                 {% endfor %}
+                </ul>
+            </div>
+            <div class="tabs-stage">
+                {% for block in section.blocks %}
+                    {% case block.type %}
+                           {% when 'category' %}
+                                {% if block.settings.title != blank %} 
+                                    <div id="tab-{{ forloop.index }}">
+                                        {% render 'image-snippet', image: block.settings.image, lazyload: 'lazy' %}
+                                    </div>
+                                {% endif %}
+                 {% endcase %}
+             {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% schema %}
+    {
+        "name": "Featured Categories",
+        "settings": [
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading",
+                "default": "Featured Categories"
+            },
+            {
+                "type": "inline_richtext",
+                "id": "subheading",
+                "label": "Subheading",
+                "default": "Browse a full range of products from leading Categories."
+            }
+        ],
+        "blocks": [
+            {
+                "type": "category",
+                "name": "Category",
+                "limit": 6,
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Title",
+                        "default": "Grinders"
+                    },
+                    {
+                        "type": "text",
+                        "id": "percentage",
+                        "label": "Percentage",
+                        "default": "07% OFF"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+               "name": "Featured Categories"
+            }
+        ]
+    }
+{% endschema %}

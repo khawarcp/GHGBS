@@ -585,6 +585,7 @@ p a:not(.button), .rte a:not(.button), .link {
 
 .heading:first-child {
   margin-block-start: 0;
+  padding-inline-end: 10px;
 }
 
 .heading:last-child {
@@ -8197,6 +8198,7 @@ input:checked + .popover__choice-label:is(:lang(ae), :lang(ar), :lang(arc), :lan
   margin: 0;
   padding: 21px 0;
   display: flex;
+  font-family: 'URW DIN';
 }
 
 .mobile-nav__image-heading {
@@ -8220,6 +8222,7 @@ input:checked + .popover__choice-label:is(:lang(ae), :lang(ar), :lang(arc), :lan
 .mobile-nav .mobile-nav .mobile-nav__item {
   border: none;
   margin-block-end: 15px;
+  padding-inline-end: 10px;
 }
 
 .mobile-nav .mobile-nav .mobile-nav__link {

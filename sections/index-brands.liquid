@@ -15,19 +15,21 @@
                                {% when 'brand' %}
                                 {% if block.settings.brand_image != blank %}
                                     <div class="item">
-                                        <div class="brand-card">
+                                        <a href="{{ block.settings.url | default: "#." }}" class="brand-card">
                                             <div class="brand-logo">
                                                 {% render 'image-snippet', image: block.settings.brand_image, lazyload: 'lazy' %}
                                             </div>
+                                           <div class="brand-arrow">
                                             <p> {{ block.settings.brand_name }} </p>
                                             {% render 'image-snippet-np', image: 'tone-arrow.svg' , assetURL: true, lazyload: 'lazy', width: '16' %}
+                                           </div>
                                             {% if block.settings.display_label %}                                                
                                                 <div class="dstributor flex">
                                                     {% render 'image-snippet-np', image: 'no-1.svg' , assetURL: true, lazyload: 'lazy' %}
                                                     <p>#1 DISTRIBUTOR</p>
                                                 </div>
                                             {% endif %}
-                                        </div>
+                                        </a>
                                     </div> 
                                 {% endif %}
                      {% endcase %}
@@ -76,6 +78,11 @@
                         "id": "brand_name",
                         "label": "Name",
                         "default": "Brand Name"
+                    },
+                    {
+                        "type": "url",
+                        "id": "url",
+                        "label": "URL"
                     }
                 ]
             }

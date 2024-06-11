@@ -222,8 +222,8 @@ jQuery(document).ready(function() {
         smartSpeed: 800,
         nav: true,
         navText: [
-            '<span class="slickPrev slide-arrow prev-arrow"><img src="images/left-arrow.svg" alt="arrow"></span>',
-            '<span class="slickNext slide-arrow next-arrow"><img src="images/right-arrow.svg" alt="arrow"></span>'
+            '<span class="slickPrev slide-arrow prev-arrow"><img src="https://cdn.shopify.com/s/files/1/0576/3999/3526/files/left-arrow.svg" alt="arrow"></span>',
+            '<span class="slickNext slide-arrow next-arrow"><img src="https://cdn.shopify.com/s/files/1/0576/3999/3526/files/right-arrow.svg" alt="arrow"></span>'
         ],
         responsive: {
             0: {

@@ -1397,12 +1397,6 @@
     .launch-img::after {
         display: none;
     }
-    .about-banner {
-        background-position: 80% 100%;
-    }
-    .about-banner .banner-logo, .blog-banner .banner-logo {
-        display: none;
-    }
 
 
 
