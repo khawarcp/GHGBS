@@ -61,6 +61,14 @@ predictive-search-drawer#search-drawer {
     margin-top: 10px;
 }
 
+.link-bar__wrapper > * {
+    font-family: "URW DIN";
+}
+
+.link-bar {
+    margin-bottom: 30px;
+}
+
 @media screen and (min-width: 1200px) {
     store-header .container {
         padding: 0;

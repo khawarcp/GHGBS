@@ -34,7 +34,7 @@
 
             <div class="hme-blog-dta flex justify-between">
                 {% for article in blog.articles limit: section.settings.articles_count%}                    
-                    {%- render 'custom-article-item', article: article show_date: section.settings.show_date, show_author: section.settings.show_author, show_category: section.settings.show_category, show_excerpt: section.settings.show_excerpt -%}
+                    {%- render 'custom-article-item', article: article, show_date: section.settings.show_date, show_author: section.settings.show_author, show_category: section.settings.show_category, show_excerpt: section.settings.show_excerpt -%}
                     {%- else -%}
                         {%- for i in (1..section.settings.articles_count) -%}
                             <div {% if settings.stagger_blog_posts_apparition %}reveal{% endif %} class="article-item">

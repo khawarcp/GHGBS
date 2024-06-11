@@ -1,12 +1,29 @@
 {
   "sections": {
+    "page_banner_QTQbDW": {
+      "type": "page-banner",
+      "settings": {
+        "show_custom_title": true,
+        "custom_title": "Our <br> Blogs",
+        "image": "shopify:\/\/shop_images\/blog-bg.png"
+      }
+    },
     "main": {
       "type": "main-blog",
       "settings": {
+        "custom_title": "Latest News &amp; Blogs",
+        "show_blog_title": false,
+        "show_tags": false,
+        "show_category": false,
+        "show_date": true,
+        "show_author": true,
+        "show_excerpt": false,
+        "articles_per_page": 12
       }
     }
   },
   "order": [
+    "page_banner_QTQbDW",
     "main"
   ]
 }
