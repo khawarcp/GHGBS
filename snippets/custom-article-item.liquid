@@ -4,10 +4,10 @@
         {% if show_date and show_author %}                                                    
         <p>
             {% if show_date %}
-                {{ article.published_at | date: "%b %d, %Y" }} &#124;
+                {{ article.published_at | date: format: 'abbreviated_date' }} &#124;
             {% endif %}
             {% if show_author %}
-                {{ article.author }}                                
+                {{ 'article.general.written_by' | t: author: article.author }}                             
             {% endif %}
             </p>
         {% endif %}

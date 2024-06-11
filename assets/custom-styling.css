@@ -69,6 +69,38 @@ predictive-search-drawer#search-drawer {
     margin-bottom: 30px;
 }
 
+.blog-detail-content img {
+    margin-bottom: 16px;
+}
+
+.article_content {
+    margin-top: 32px;
+}
+
+.article__share {
+    margin-block-start: 20px;
+}
+
+.article__tags {
+    margin-block-start: 20px;
+}
+
+.article__tags-label {
+    margin-bottom: 0;
+}
+
+.article__prev-next .explore-cntnt {
+    margin-bottom: 20px;
+}
+
+.article__share-button-item--facebook svg path, .article__share-button-item--twitter svg path {
+    fill: #263542;
+}
+
+.article__prev-next .blog-img {
+    max-width: 100%;
+}
+
 @media screen and (min-width: 1200px) {
     store-header .container {
         padding: 0;

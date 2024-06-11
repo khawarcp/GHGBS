@@ -1,19 +1,20 @@
 {%- if blog.previous_article or blog.next_article -%}
   <div class="article__prev-next vertical-breather vertical-breather--tight {% if settings.background == settings.secondary_background %}vertical-breather--margin{% endif %}">
     <div class="container">
-      <header class="section__header text-container">
-        <h2 class="heading h3">{{ 'article.general.continue_reading' | t }}</h2>
-      </header>
+
+        <div class="explore-cntnt">                                                
+        <h2> {{ 'article.general.continue_reading' | t }} </h2>
+        </div>
 
       <div class="scroller">
         <div class="scroller__inner">
           <article-list {% if settings.stagger_blog_posts_apparition %}stagger-apparition{% endif %} class="article-list article-list--scrollable">
             {%- if blog.next_article -%}
-              {%- render 'article-item', article: blog.next_article, heading_size: 'h5' -%}
+              {%- render 'custom-article-item', article: article, blog.next_article -%}
             {%- endif -%}
 
             {%- if blog.previous_article -%}
-              {%- render 'article-item', article: blog.previous_article, heading_size: 'h5' -%}
+              {%- render 'custom-article-item', article: article, blog.previous_article -%}
             {%- endif -%}
           </article-list>
         </div>
