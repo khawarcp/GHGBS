@@ -3,12 +3,18 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "description_XLVitG": {
+          "type": "description",
+          "settings": {
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
             "hide_sold_out_variants": false,
             "selector_mode": "block",
             "color_mode": "color",
+            "variant_image_options": "",
             "size_chart_page": ""
           }
         },
@@ -27,18 +33,40 @@
             "buy_now_button_background": "rgba(0,0,0,0)",
             "buy_now_button_text_color": "rgba(0,0,0,0)"
           }
+        },
+        "wishlist_hero_custom_product_button_qWyhne": {
+          "type": "shopify:\/\/apps\/wishlist-hero\/blocks\/custom-product-button\/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
+          "settings": {
+            "displayButtonMode": "~",
+            "contentAlignment": "center",
+            "buttonAlignment": "center",
+            "buttonFullwidth": true,
+            "removeBoxShadowAndBorder": false,
+            "horizontalPadding": 20,
+            "iconTopOffset": 0,
+            "addedCssClassNames": "",
+            "addedContainerStyles": ""
+          }
+        },
+        "store_availability_LbJag6": {
+          "type": "store_availability",
+          "settings": {
+          }
         }
       },
       "block_order": [
+        "description_XLVitG",
         "variant_picker",
         "quantity_selector",
-        "buy_buttons"
+        "buy_buttons",
+        "wishlist_hero_custom_product_button_qWyhne",
+        "store_availability_LbJag6"
       ],
       "settings": {
         "show_vendor": true,
         "show_sku": false,
         "show_taxes_included": false,
-        "show_product_rating": false,
+        "show_product_rating": true,
         "show_sticky_add_to_cart": false,
         "show_share_buttons": false,
         "help_page": "",
@@ -46,47 +74,27 @@
         "enable_video_looping": false,
         "enable_image_zoom": true,
         "show_thumbnails_on_mobile": false,
-        "desktop_thumbnails_position": "bottom",
+        "desktop_thumbnails_position": "left",
         "transition_effect": "slide"
+      }
+    },
+    "collection_video_6MPxhC": {
+      "type": "collection-video",
+      "settings": {
+        "subheading": "",
+        "title": "",
+        "video": "{{ product.metafields.custom.video.value }}",
+        "image": "{{ product.metafields.custom.video_poster.value }}",
+        "background_type": "full_width",
+        "video_size": "small",
+        "autoplay": false,
+        "show_video_controls": false,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)"
       }
     },
     "product-content": {
       "type": "product-content",
-      "blocks": {
-        "description": {
-          "type": "description",
-          "settings": {
-          }
-        },
-        "e7203c57-81ad-4c13-b87e-265d190d6590": {
-          "type": "content",
-          "settings": {
-            "title": "Quality Assurance",
-            "content": "",
-            "page": "quality-assurance"
-          }
-        },
-        "dfd1a288-9742-4743-814f-17784512c656": {
-          "type": "complementary_products",
-          "disabled": true,
-          "settings": {
-            "title": "People also added"
-          }
-        },
-        "7b457e59-2718-46aa-932c-6b3744e014c7": {
-          "type": "liquid",
-          "settings": {
-            "title": "Reviews",
-            "liquid": "<div id=\"looxReviews\" data-product-id=\"{{product.id}}\" class=\"loox-reviews-default\"><\/div><br>"
-          }
-        }
-      },
-      "block_order": [
-        "description",
-        "e7203c57-81ad-4c13-b87e-265d190d6590",
-        "dfd1a288-9742-4743-814f-17784512c656",
-        "7b457e59-2718-46aa-932c-6b3744e014c7"
-      ],
       "settings": {
       }
     },
@@ -95,24 +103,17 @@
       "settings": {
         "subheading": "",
         "title": "You may also like",
+        "show_cta": true,
         "recommendations_count": 4,
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
-      }
-    },
-    "loox-product-reviews-app-section": {
-      "type": "apps",
-      "disabled": true,
-      "settings": {
-        "include_horizontal_margins": true,
-        "include_vertical_margins": true
       }
     }
   },
   "order": [
     "main",
+    "collection_video_6MPxhC",
     "product-content",
-    "product-recommendations",
-    "loox-product-reviews-app-section"
+    "product-recommendations"
   ]
 }

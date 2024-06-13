@@ -7,7 +7,7 @@
             <div class="explore-card flex justify-between gap-32">
                 {% if section.settings.collection_1 != blank %}
                     {% assign collection = collections[section.settings.collection_1] %}
-                    {% assign collection_url = section.settings.button_url_1 | default: collection.url %}
+                    {% assign collection_url = section.settings.button_url_1 | default: collection.url %}                    
                 <div class="grinder">
                     <h3> {{ collection.title }} </h3>
                     <div class="grinder-dta flex gap-24">
@@ -38,8 +38,14 @@
                                  {% endcase %}
                              {% endfor %}                               
                             </div>
-
-                            {% render 'anchor-snippet', image: true, button_text: section.settings.button_text_1, button_url: section.settings.button_url_1 | default: collection.url, class: 'btn-primary flex align-center justify-center gap-10' %}
+                            {% liquid
+                                    if section.settings.button_url_1 != blank
+                                    assign collection_url_1 = section.settings.button_url_1
+                                    else
+                                    assign collection_url_1 = collection.url
+                                    endif
+                                %}
+                            {% render 'anchor-snippet', image: true, button_text: section.settings.button_text_1, button_url: collection_url_1 , class: 'btn-primary flex align-center justify-center gap-10' %}
                         </div>
                     </div>
                 </div>
@@ -63,8 +69,14 @@
                         </div>
 
                     </div>
-
-                    {% render 'anchor-snippet', image: true, button_text: section.settings.button_text_2, button_url: section.settings.button_url_2 | default: collection.url, class: 'btn-primary flex align-center justify-center gap-10' %}
+                    {% liquid
+                    if section.settings.button_url_2 != blank
+                        assign collection_url_2 = section.settings.button_url_2
+                    else
+                         assign collection_url_2 = collection.url
+                    endif
+                %}
+                    {% render 'anchor-snippet', image: true, button_text: section.settings.button_text_2, button_url: collection_url_2, class: 'btn-primary flex align-center justify-center gap-10' %}
                 </div>
                 {% endif %}
             </div>

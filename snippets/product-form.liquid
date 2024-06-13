@@ -19,6 +19,14 @@
       VARIANT PICKER BLOCK TYPE
       ----------------------------------------------------------------------------------------------------------------
       {%- endcomment -%}
+
+      {%- when 'store_availability' -%}
+      {%- if template.suffix != 'quick-buy-popover' -%}
+        <store-pickup form-id="{{ product_form_id }}" class="product-form__store-availability-container">
+          {%- render 'store-availability', product_variant: product.selected_or_first_available_variant -%}
+        </store-pickup>
+      {%- endif -%}
+
       {%- when 'variant_picker' -%}
         {%- unless product.has_only_default_variant or block.settings.hide_sold_out_variants and product.available == false -%}
           {%- assign size_chart_page = block.settings.size_chart_page -%}
@@ -437,12 +445,6 @@
               </product-payment-container>
             {%- endform -%}
           </div>
-        {%- endif -%}
-
-        {%- if template.suffix != 'quick-buy-popover' -%}
-          <store-pickup form-id="{{ product_form_id }}" class="product-form__store-availability-container">
-            {%- render 'store-availability', product_variant: product.selected_or_first_available_variant -%}
-          </store-pickup>
         {%- endif -%}
     {%- endcase -%}
   {%- endfor -%}

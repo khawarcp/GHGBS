@@ -7,14 +7,14 @@
             <div class="text-sp flex gap-32 align-center">
                 <span class="bar"></span>
                 {% if section.settings.subheading != blank %}                    
-                     {{ section.settings.subheading }}
+                    <p>{{ section.settings.subheading }} </p> 
                 {% endif %}
             </div>
 
             <div class="launch-dta flex justify-between">
                 <div class="launch-text">
                     {% if section.settings.text != blank %}                    
-                        <p> {{ section.settings.text }} </p>
+                         {{ section.settings.text }} 
                     {% endif %}
                     <div class="indstry flex gap-32">
                         {% for block in section.blocks %}

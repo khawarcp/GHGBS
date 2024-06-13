@@ -77,7 +77,7 @@
         {%- endif -%}
         </span>
 
-        {%- if article.tags.size > 0 -%}
+        {%- if article.tags.size > 0 and section.settings.show_tags -%}
           <div class="article__tags">
             <span class="article__tags-label heading heading--small">{{ 'article.general.tags' | t }}</span>
 
@@ -191,6 +191,12 @@
       "id": "show_date",
       "label": "Show date",
       "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tags",
+      "label": "Show tags",
+      "default": false
     },
     {
       "type": "checkbox",

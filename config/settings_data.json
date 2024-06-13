@@ -17,6 +17,7 @@
     "secondary_button_background": "#033814",
     "secondary_button_text_color": "#ffffff",
     "product_on_sale_accent": "#de2a2a",
+    "product_sold_out_accent": "#8db1b5",
     "product_custom_label_background": "#405de6",
     "product_custom_label_2_background": "#f3ff34",
     "product_in_stock_text_color": "#2e9e7b",
@@ -31,10 +32,11 @@
     "round_color_swatches": false,
     "show_vendor": false,
     "show_secondary_image": true,
-    "product_add_to_cart": false,
+    "product_add_to_cart": true,
     "show_product_rating": false,
     "show_discount": false,
-    "product_color_display": "count",
+    "discount_mode": "percentage",
+    "product_color_display": "swatch",
     "product_image_size": "square",
     "cart_type": "message",
     "cart_icon": "shopping_cart",
@@ -167,7 +169,33 @@
     },
     "content_for_index": [
 
-    ]
+    ],
+    "blocks": {
+      "7870687481494312845": {
+        "type": "shopify:\/\/apps\/wishlist-hero\/blocks\/app-embed\/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
+        "disabled": false,
+        "settings": {
+          "customThemeName": "~",
+          "additionalWLButtonCssClasses": "",
+          "additionalWLCartBubbleCssClasses": "",
+          "extraHTMLToAppend": "",
+          "disableAutomaticButtonAddition": false
+        }
+      },
+      "1366455014531238847": {
+        "type": "shopify:\/\/apps\/wishlist-hero\/blocks\/customize-style-block\/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
+        "disabled": false,
+        "settings": {
+          "Btn_color": "",
+          "WishlistButtonTextColor": "",
+          "Ico_color": "",
+          "HeaderFontSize": 30,
+          "ProductNameFontSize": 18,
+          "PriceFontSize": 16,
+          "PriceColor": ""
+        }
+      }
+    }
   },
   "presets": {
     "Carbon": {

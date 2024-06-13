@@ -5,6 +5,7 @@
 {%- endif -%}
 
 <style>
+
   #shopify-section-{{ section.id }} {
     {%- if section.settings.background == 'rgba(0,0,0,0)' -%}
       {%- assign section_background = settings.background -%}
@@ -41,7 +42,7 @@
     --prev-next-button-color: {{ settings.text_color.red }}, {{ settings.text_color.green }}, {{ settings.text_color.blue }};
 
     --section-background: {{ section_background.red }}, {{ section_background.green }}, {{ section_background.blue }};
-    --section-products-per-row: 2;
+    --section-products-per-row: {{ section.settings.mobile_products_per_row | times: 1 }};
   }
 
   @media screen and (min-width: 741px) {
@@ -66,16 +67,12 @@
 <section class="section {% unless blends_with_background %}section--flush{% endunless %}">
   <div class="section__color-wrapper">
     <div class="container {% unless blends_with_background %}vertical-breather{% endunless %}">
-      {%- if section.blocks.size > 1 or section.settings.title != blank or section.settings.subheading != blank or section.settings.content != blank -%}
-        <header class="section__header {% if section.settings.content != blank %}section__header--tight{% endif %}">
-          {%- if section.settings.title != blank or section.settings.subheading != blank or section.settings.content != blank -%}
+      {%- if section.blocks.size > 1 or section.settings.title != blank -%}
+        <header class="shop-tab flex justify-between">
+          {%- if section.settings.title != blank -%}
             <div class="text-container">
-              {%- if section.settings.subheading != blank -%}
-                <h2 class="heading heading--small">{{ section.settings.subheading }}</h2>
-              {%- endif -%}
-
               {%- if section.settings.title != blank -%}
-                <h3 class="heading h2">{{ section.settings.title }}</h3>
+                <h2>{{ section.settings.title }}</h2>
               {%- endif -%}
 
               {%- if section.settings.content != blank -%}
@@ -115,6 +112,8 @@
                 {%- assign number_of_products_minus_one = section.settings.products_per_row | minus: 1 -%}
                 {%- assign gap_width = 24.0 | divided_by: section.settings.products_per_row | times: number_of_products_minus_one -%}
                 {%- capture sizes_attribute -%}(max-width: 740px) 52vw, calc(min(100vw - 80px, 1520px) / {{ section.settings.products_per_row }} - {{ gap_width | ceil }}px){%- endcapture -%}
+                  {%- assign sidebar_width = 0 -%}
+                {%- capture sizes_attribute -%}(max-width: 740px) calc({{ 100.0 | divided_by: section.settings.mobile_products_per_row | ceil }}vw - 24px), calc((min(100vw - 80px, 1520px) - {{ sidebar_width }}px) / {{ section.settings.desktop_products_per_row }} - {{ gap_width | ceil }}px){%- endcapture -%}
 
                 {%- for product in collection.products limit: section.settings.products_count -%}
                   {%- if product.featured_media -%}
@@ -178,7 +177,7 @@
   "max_blocks": 5,
   "disabled_on": {
     "templates": ["password"],
-    "groups": ["header", "custom.overlay"]
+    "groups": ["header"]
   },
   "blocks": [
     {
@@ -213,20 +212,9 @@
   "settings": [
     {
       "type": "text",
-      "id": "subheading",
-      "label": "Subheading",
-      "default": "Your title"
-    },
-    {
-      "type": "text",
       "id": "title",
       "label": "Heading",
       "default": "Collection"
-    },
-    {
-      "type": "richtext",
-      "id": "content",
-      "label": "Content"
     },
     {
       "type": "range",
@@ -245,6 +233,22 @@
       "max": 6,
       "step": 1,
       "default": 4
+    },
+    {
+      "type": "select",
+      "id": "mobile_products_per_row",
+      "label": "Products per row (mobile)",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "2"
     },
     {
       "type": "checkbox",

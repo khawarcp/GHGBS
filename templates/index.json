@@ -215,9 +215,43 @@
         "subheading": "Browse a full range of products from leading Categories."
       }
     },
-    "index_best_sellers_U6PTj7": {
-      "type": "index-best-sellers",
+    "featured_collections_LPNNPU": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_mC6kmz": {
+          "type": "collection",
+          "settings": {
+            "collection": "ceado-coffee-grinders",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        },
+        "collection_aYER8d": {
+          "type": "collection",
+          "settings": {
+            "collection": "bentwood",
+            "label": "",
+            "button_text": "",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_mC6kmz",
+        "collection_aYER8d"
+      ],
       "settings": {
+        "title": "Shop Products",
+        "products_count": 8,
+        "products_per_row": 4,
+        "mobile_products_per_row": "1",
+        "stack_products": true,
+        "show_cta": true,
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "button_background": "rgba(0,0,0,0)",
+        "button_text_color": "rgba(0,0,0,0)"
       }
     },
     "index_collection_blocks_PNTcm9": {
@@ -351,7 +385,7 @@
     "index_explore_NnfyaQ",
     "index_brands_gGPWB4",
     "index_categories_bcRtJ8",
-    "index_best_sellers_U6PTj7",
+    "featured_collections_LPNNPU",
     "index_collection_blocks_PNTcm9",
     "index_happy_customers_8DrHxj",
     "index_launched_WjVWxG",

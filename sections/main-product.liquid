@@ -54,23 +54,25 @@
     {%- endif -%}
 
     <div class="container">
-      <nav aria-label="{{ 'general.breadcrumb.title' | t }}" class="breadcrumb text--xsmall text--subdued hidden-phone">
-        <ol class="breadcrumb__list" role="list">
-          <li class="breadcrumb__item">
-            <a class="breadcrumb__link" href="{{ routes.root_url }}">{{ 'general.breadcrumb.home' | t }}</a>
-          </li>
-
-          {%- if collection -%}
+      {% if section.settings.show_bradcrumb %}        
+        <nav aria-label="{{ 'general.breadcrumb.title' | t }}" class="breadcrumb text--xsmall text--subdued hidden-phone">
+          <ol class="breadcrumb__list" role="list">
             <li class="breadcrumb__item">
-              <a class="breadcrumb__link" href="{{ collection.url }}">{{- collection.title -}}</a>
+              <a class="breadcrumb__link" href="{{ routes.root_url }}">{{ 'general.breadcrumb.home' | t }}</a>
             </li>
-          {%- endif -%}
-
-          <li class="breadcrumb__item">
-            <span class="breadcrumb__link" aria-current="page">{{ product.title }}</span>
-          </li>
-        </ol>
-      </nav>
+  
+            {%- if collection -%}
+              <li class="breadcrumb__item">
+                <a class="breadcrumb__link" href="{{ collection.url }}">{{- collection.title -}}</a>
+              </li>
+            {%- endif -%}
+  
+            <li class="breadcrumb__item">
+              <span class="breadcrumb__link" aria-current="page">{{ product.title }}</span>
+            </li>
+          </ol>
+        </nav>
+      {% endif %}
 
       <!-- PRODUCT TOP PART -->
       <div class="product product--thumbnails-{{ section.settings.desktop_thumbnails_position }}">
@@ -461,6 +463,13 @@
       ]
     },
     {
+      "type": "store_availability",
+      "name": "Store Availability",
+      "limit": 1,
+      "settings": [
+      ]
+    },
+    {
       "type": "line_item_property",
       "name": "Line item property",
       "settings": [
@@ -544,6 +553,12 @@
       "type": "checkbox",
       "id": "show_taxes_included",
       "label": "Show taxes included",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_bradcrumb",
+      "label": "Show Breadcrumb",
       "default": false
     },
     {

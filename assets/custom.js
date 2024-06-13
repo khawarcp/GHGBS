@@ -129,6 +129,7 @@
  * feature is disabled, then this script is never loaded.
  */
 
+
 jQuery("#featuredcarousel").owlCarousel({
     autoplay: false,
     loop: true,
@@ -142,6 +143,7 @@ jQuery("#featuredcarousel").owlCarousel({
     autoHeight: true,
     autoplayTimeout: 5000,
     smartSpeed: 800,
+    stagePadding:50,
     nav: false,
     responsive: {
         0: {
@@ -149,6 +151,9 @@ jQuery("#featuredcarousel").owlCarousel({
         },
 
         600: {
+            items: 2
+        },
+            700: {
             items: 3
         },
 
@@ -157,11 +162,31 @@ jQuery("#featuredcarousel").owlCarousel({
         },
 
         1366: {
-            items: 5.2
+            items: 5
         }
     }
 });
 
+
+$(document).ready(function() {
+    function checkProductItems() {
+        $('.product-item').each(function() {
+            if ($(this).find('.product-item-meta__swatch-list').length > 0) {
+                $(this).addClass('hasElement');
+            } else {
+                $(this).addClass('notHasElement');
+            }
+        });
+    }
+
+    // Execute on page load
+    checkProductItems();
+
+    // Execute on .tabs-nav__item click
+    $('.tabs-nav__item').on('click', function() {
+        checkProductItems();
+    });
+});
 
 //   Featured Tabbing
 // Show the first tab by default
@@ -194,6 +219,7 @@ function tabClicked(tab) {
     tab.classList.add('active')
 
     const contents = document.querySelectorAll('.content')
+
 
     contents.forEach((content) => {
         content.classList.remove('show')
@@ -253,6 +279,7 @@ jQuery(document).ready(function() {
         currentSlide.text(currentIndex);
     }
 });
+
 
 
 
@@ -424,3 +451,4 @@ $(document).ready(function () {
         sync1.data('owl.carousel').to(number, 300, true);
     });
 });
+

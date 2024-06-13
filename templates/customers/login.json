@@ -2,7 +2,16 @@
   "sections": {
     "main": {
       "type": "main-customers-login",
-      "disabled": true,
+      "blocks": {
+        "login_FyyXL8": {
+          "type": "login",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "login_FyyXL8"
+      ],
       "settings": {
       }
     }

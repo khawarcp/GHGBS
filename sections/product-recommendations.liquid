@@ -69,7 +69,7 @@
                 {%- assign smallest_image_aspect_ratio = smallest_image_aspect_ratio | at_least: product.featured_media.aspect_ratio -%}
 
                 {%- capture sizes_attribute -%}(max-width: 740px) 75vw, min({{ 100.0 | divided_by: 4 | ceil }}vw, {{ 1520.0 | divided_by: 4 | ceil }}px){%- endcapture -%}
-                {%- render 'product-item', product: product, sizes_attribute: sizes_attribute, reveal: settings.stagger_products_apparition -%}
+                {%- render 'product-item', product: product, sizes_attribute: sizes_attribute, show_cta: section.settings.show_cta, reveal: settings.stagger_products_apparition -%}
               {%- endfor -%}
             </div>
           </div>
@@ -115,6 +115,12 @@
       "id": "title",
       "label": "Heading",
       "default": "You may also like"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_cta",
+      "label": "Show add to cart below info",
+      "default": true
     },
     {
       "type": "range",

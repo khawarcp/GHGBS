@@ -1,0 +1,44 @@
+
+{% unless section.settings.brand_logo == blank and section.settings.brand_info == blank %}
+<section class="brands-section">
+    <div class="container">
+        <div class="brand-wrapper">
+            <div class="brand-image">
+                {% render 'image-snippet', image: section.settings.brand_logo, lazyload: 'lazy', width: '290', '166' %}
+            </div>
+            <div class="brand-desc">
+                {% if section.settings.show_collection_desc %}
+                    {{ collection.description }}
+                {% else %}
+                <h2 class="brand-title"> {{ collection.title }} </h2>
+                {{ section.settings.brand_info }}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endunless %}
+
+{% schema %}
+    {
+        "name" : "Brand",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "brand_logo",
+                "label": "Brand Logo"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_collection_desc",
+                "label": "Show Collection Description",
+                "default": false
+            },
+            {
+                "type": "richtext",
+                "id": "brand_info",
+                "label": "Brand Info"
+            }
+        ]
+    }
+{% endschema %}

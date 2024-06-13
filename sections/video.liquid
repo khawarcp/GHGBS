@@ -79,7 +79,7 @@
           <div class="video-wrapper__poster-content {% if section.settings.background_type != 'boxed' %}content-box content-box--large content-box--text-center{% endif %}">
             {%- unless section.settings.autoplay -%}
               <button type="button" class="video-wrapper__play-button video-wrapper__play-button--large video-wrapper__play-button--ripple" title="{{ 'general.accessibility.play_video' | t | escape }}">
-                {%- render 'icon' with 'play', width: 72, height: 72 -%}
+                {%- render 'play-icon'-%}
               </button>
             {%- endunless -%}
 
