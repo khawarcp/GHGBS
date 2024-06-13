@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div class="cntct-form">
-                {%- form 'contact' -%}
+                {%- form 'contact', id : "ContactForm" -%}
                     {%- if form.posted_successfully? -%}
                         <div class="banner banner--success form__banner">
                           <span class="banner__ribbon">{% render 'icon' with 'form-success' %}</span>
@@ -98,6 +98,10 @@
                             <label for="Form-{{ section.id }}-sku-product"> SKU/ Product Number</label>
                             <input type="text" id="Form-{{ section.id }}-sku-product" placeholder="SKU/ Product Number"  name="contact[product_number]" value="{{ form.product_number }}">
                         </div>
+                        <div class="sku-product flex">
+                            <label for="Form-{{ section.id }}-serial_number"> Serial Number</label>
+                            <input type="text" id="Form-{{ section.id }}-serial_number" placeholder="Serial Number"  name="contact[serial_number]" value="{{ form.serial_number }}">
+                        </div>
                     </div>
                     <div class="fname flex">
                         <div class="sku-product flex">
@@ -107,8 +111,10 @@
 
                         </div>
                     </div>
+                    <div id="re-captcha"></div>
+
                     <div class="submit-btn">
-                        <button type="submit" > Submit</button>
+                        <button type="submit" id="contactFormSubmit" disabled> Submit</button>
                     </div>
 
                 {%- endform -%}
