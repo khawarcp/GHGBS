@@ -1,4 +1,4 @@
-<div class="blog-img">
+<div {% if settings.stagger_blog_posts_apparition %}reveal{% endif %} class="blog-img">
     <a href="{{ article.url }}">
         {% render 'image-snippet', image: article.image.src, lazyload: 'lazy', width: '394',  height: '239' %}
         {% if show_date and show_author %}                                                    

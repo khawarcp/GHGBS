@@ -42,14 +42,14 @@
         </link-bar>
       {%- endif -%}
 
-      <div class="blog-pge-cntnt flex justify-between">
+      <article-list {% if settings.stagger_blog_posts_apparition %}stagger-apparition{% endif %} class="blog-pge-cntnt flex justify-between">
         {%- paginate blog.articles by section.settings.articles_per_page -%}
           {%- for article in blog.articles -%}
             {%- render 'custom-article-item', article: article, show_date: section.settings.show_date, show_author: section.settings.show_author, show_category: section.settings.show_category, show_excerpt: section.settings.show_excerpt -%}
           {%- endfor -%}
           {%- render 'pagination', paginate: paginate -%}
         {%- endpaginate -%}         
-      </div>
+      </article-list>
   </div>
 {%- endif -%}
 </section>

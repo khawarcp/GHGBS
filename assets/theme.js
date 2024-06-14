@@ -4577,7 +4577,7 @@ window.customElements.define("image-with-text-block", ImageWithTextBlock);
 // js/custom-element/section/blog/article-list.js
 var ArticleList = class extends CustomHTMLElement {
   async connectedCallback() {
-    this.articleItems = Array.from(this.querySelectorAll(".article-item"));
+    this.articleItems = Array.from(this.querySelectorAll(".blog-img"));
     if (this.staggerApparition) {
       await this.untilVisible({ threshold: this.clientHeight > 0 ? Math.min(50 / this.clientHeight, 1) : 0 });
       const animation = new CustomAnimation(new ParallelEffect(this.articleItems.map((item, index) => {

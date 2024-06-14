@@ -32,9 +32,9 @@
                 {% render 'anchor-snippet', image: true, button_text: section.settings.button_text, button_url: button_url, class: 'btn-primary flex align-center justify-center gap-10' %}
             </div>
 
-            <div class="hme-blog-dta flex justify-between">
+            <article-list {% if settings.stagger_blog_posts_apparition %}stagger-apparition{% endif %} class="hme-blog-dta flex justify-between">
                 {% for article in blog.articles limit: section.settings.articles_count%}                    
-                    {%- render 'custom-article-item', article: article, show_date: section.settings.show_date, show_author: section.settings.show_author, show_category: section.settings.show_category, show_excerpt: section.settings.show_excerpt -%}
+                    {%- render 'custom-article-item', article: article, show_date: section.settings.show_date, show_author: section.settings.show_author, show_category: section.settings.show_category, show_excerpt: section.settings.show_excerpt  -%}
                     {%- else -%}
                         {%- for i in (1..section.settings.articles_count) -%}
                             <div {% if settings.stagger_blog_posts_apparition %}reveal{% endif %} class="article-item">
@@ -54,7 +54,7 @@
                             </div>
                         {%- endfor -%}
                 {% endfor %}
-            </div>
+            </article-list>
         </div>
     </div>
 </section>
