@@ -4,20 +4,11 @@
       "type": "main-article",
       "settings": {
         "show_on_scroll_navigation": true,
+        "show_bradcrumb": false,
         "show_author": true,
         "show_date": true,
-        "show_share_buttons": false
-      }
-    },
-    "blog-post-prev-next": {
-      "type": "blog-post-prev-next",
-      "settings": {
-      }
-    },
-    "blog-post-comments": {
-      "type": "blog-post-comments",
-      "settings": {
-        "show_gravatar": true
+        "show_tags": false,
+        "show_share_buttons": true
       }
     },
     "index_blogs_nAE6HF": {
@@ -32,6 +23,17 @@
         "show_excerpt": false,
         "button_text": "",
         "button_url": ""
+      }
+    },
+    "blog-post-prev-next": {
+      "type": "blog-post-prev-next",
+      "settings": {
+      }
+    },
+    "blog-post-comments": {
+      "type": "blog-post-comments",
+      "settings": {
+        "show_gravatar": true
       }
     }
   },

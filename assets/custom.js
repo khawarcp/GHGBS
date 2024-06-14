@@ -321,17 +321,6 @@ $('.meet-team-prnt').owlCarousel({
         }
 
     }
-})
-
-// Contact Page Phone number
-
-document.addEventListener('DOMContentLoaded', () => {
-    const numberInput = document.getElementById('number');
-
-    numberInput.addEventListener('input', () => {
-        // Remove any non-numeric characters
-        numberInput.value = numberInput.value.replace(/[^0-9]/g, '');
-    });
 });
 
 
