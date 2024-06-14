@@ -171,17 +171,6 @@
 
     ],
     "blocks": {
-      "7870687481494312845": {
-        "type": "shopify:\/\/apps\/wishlist-hero\/blocks\/app-embed\/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
-        "disabled": false,
-        "settings": {
-          "customThemeName": "~",
-          "additionalWLButtonCssClasses": "",
-          "additionalWLCartBubbleCssClasses": "",
-          "extraHTMLToAppend": "",
-          "disableAutomaticButtonAddition": false
-        }
-      },
       "1366455014531238847": {
         "type": "shopify:\/\/apps\/wishlist-hero\/blocks\/customize-style-block\/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
         "disabled": false,
@@ -193,6 +182,17 @@
           "ProductNameFontSize": 18,
           "PriceFontSize": 16,
           "PriceColor": ""
+        }
+      },
+      "7870687481494312845": {
+        "type": "shopify:\/\/apps\/wishlist-hero\/blocks\/app-embed\/a9a5079b-59e8-47cb-b659-ecf1c60b9b72",
+        "disabled": false,
+        "settings": {
+          "customThemeName": "~",
+          "additionalWLButtonCssClasses": "",
+          "additionalWLCartBubbleCssClasses": "",
+          "extraHTMLToAppend": "<script src=\"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/arrive\/2.4.1\/arrive.min.js\"><\/script>\n<script type=\"text\/javascript\">\ndocument.arrive(\".wishlist-hero-custom-button\", function (wishlistButton) {\nvar ev = new CustomEvent(\"wishlist-hero-add-to-custom-element\", {\ndetail: wishlistButton,\n});\ndocument.dispatchEvent(ev);\n});\n<\/script>",
+          "disableAutomaticButtonAddition": false
         }
       }
     }

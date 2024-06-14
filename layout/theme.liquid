@@ -93,7 +93,7 @@ NOTE TO DEVELOPERS: welcome to Focal theme! We hope that you will enjoy editing 
 
 
     {{ content_for_header }}
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+
   </head>
 
   {%- assign feature_classes = '' -%}
@@ -173,38 +173,6 @@ NOTE TO DEVELOPERS: welcome to Focal theme! We hope that you will enjoy editing 
     {%- if request.page_type != 'gift_card' and request.page_type != 'password' -%}
       {%- sections 'footer-group' -%}
     {%- endif -%}
-    <script>
-        
-    var actCallback = function (response) {
-          
-      $('#contactFormSubmit').prop("disabled", false);
-          
-          
-    };
-          
-    var expCallback = function() {
-          
-      $('#contactFormSubmit').prop("disabled", true);
-          
-    };
-          
-          
-    var onloadCallback = function () {
-          
-      var widget = grecaptcha.render(document.getElementById("re-captcha"), {
-          
-        'sitekey' : "6LcJBvgpAAAAAFIfQBEuokU6bLip3JX0tWjfTx8Q", // Sitekey, Retrieving from reCaptcha
-          
-        'theme': "light",
-          
-        'callback' : actCallback,
-          
-        'expired-callback': expCallback,
-          
-      });
-          
-    }
-          
-  </script>
+
   </body>
 </html>
