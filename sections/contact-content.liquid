@@ -70,7 +70,7 @@
                         </div>
                         <div class="cmpny-nme flex">
                             <label for="Form-{{ section.id }}-company"> Company</label>
-                            <input type="text" id="Form-{{ section.id }}-company" placeholder="Company" name="contact[company]" value="{{ form.company }}" required>
+                            <input type="text" id="Form-{{ section.id }}-company" placeholder="Company" name="contact[company]" value="{{ form.company }}">
                         </div>
                     </div>
                     <div class="fname flex">
@@ -79,14 +79,14 @@
                             <input id="Form-{{ section.id }}-name" type="text" placeholder="Full Name" name="contact[name]"  value="{{ form.name }}" required>
                         </div>
                         <div class="cmpny-nme flex">
-                            <label for="Form-{{ section.id }}-name">email</label>
-                            <input type="email" id="Form-{{ section.id }}-email" placeholder="{{ 'contact.form.email' | t }}" name="contact[email]" required value="{% if form.email %} {{ form.email }} {% else %} {{ customer.email }}{% endif %}"> 
+                            <label for="Form-{{ section.id }}-name">Email</label>
+                            <input type="email" id="Form-{{ section.id }}-email" placeholder="Email Address" name="contact[email]" required value="{% if form.email %} {{ form.email }} {% else %} {{ customer.email }}{% endif %}"> 
                         </div>
                     </div>
                     <div class="fname flex">
                         <div class="inqury-type flex">
                             <label for="Form-{{ section.id }}-phone_number">Phone</label>
-                            <input type="tel" id="Form-{{ section.id }}-phone_number" placeholder="Phone Number" maxlength="10"  value="{% if form.phone_number %} {{ form.phone_number }}{% endif %}" name="contact[phone_number]" required>
+                            <input type="tel" id="Form-{{ section.id }}-phone_number" placeholder="Phone Number" maxlength="10"  value="{% if form.phone_number %} {{ form.phone_number }}{% endif %}" name="contact[phone_number]">
                         </div>
                         <div class="cmpny-nme flex">
                             <label for="Form-{{ section.id }}-model_number">Model Number</label>

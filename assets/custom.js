@@ -145,12 +145,15 @@ jQuery("#featuredcarousel").owlCarousel({
     smartSpeed: 800,
     stagePadding:50,
     nav: false,
+   dotsEach: 4,
     responsive: {
         0: {
+          dotsEach: 3,
             items: 1
         },
 
         600: {
+          
             items: 2
         },
             700: {
@@ -162,6 +165,12 @@ jQuery("#featuredcarousel").owlCarousel({
         },
 
         1366: {
+         
+            items: 5
+           
+        },
+       1467: {
+           stagePadding:100,
             items: 5
         }
     }
@@ -321,6 +330,17 @@ $('.meet-team-prnt').owlCarousel({
         }
 
     }
+})
+
+// Contact Page Phone number
+
+document.addEventListener('DOMContentLoaded', () => {
+    const numberInput = document.getElementById('number');
+
+    numberInput.addEventListener('input', () => {
+        // Remove any non-numeric characters
+        numberInput.value = numberInput.value.replace(/[^0-9]/g, '');
+    });
 });
 
 

@@ -26,7 +26,7 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_payment_button": true,
+            "show_payment_button": false,
             "show_gift_card_recipient": false,
             "atc_button_background": "rgba(0,0,0,0)",
             "atc_button_text_color": "rgba(0,0,0,0)",
@@ -66,6 +66,7 @@
         "show_vendor": true,
         "show_sku": false,
         "show_taxes_included": false,
+        "show_bradcrumb": false,
         "show_product_rating": true,
         "show_sticky_add_to_cart": false,
         "show_share_buttons": false,
@@ -73,7 +74,7 @@
         "enable_video_autoplay": true,
         "enable_video_looping": false,
         "enable_image_zoom": true,
-        "show_thumbnails_on_mobile": false,
+        "show_thumbnails_on_mobile": true,
         "desktop_thumbnails_position": "left",
         "transition_effect": "slide"
       }
@@ -88,7 +89,7 @@
         "background_type": "full_width",
         "video_size": "small",
         "autoplay": false,
-        "show_video_controls": false,
+        "show_video_controls": true,
         "background": "rgba(0,0,0,0)",
         "text_color": "rgba(0,0,0,0)"
       }
