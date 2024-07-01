@@ -98,7 +98,7 @@ assign greater_block = false
                         <nav class="shop-lst">
                             <ul>
                               {%- for link in menu.links -%}
-                                <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                                <li><a href="{{ link.url }}" class="{% if link.active %} text--underlined {% endif %}"> {{ link.title }}</a></li>
                               {%- endfor -%}
                             </ul>
                         </nav>
@@ -544,10 +544,6 @@ assign greater_block = false
       },
       {
         "type": "links",
-        "settings": {}
-      },
-      {
-        "type": "newsletter",
         "settings": {}
       },
       {

@@ -11225,7 +11225,7 @@ shopify-payment-terms {
 }
 
 .main-search__form {
-  --form-input-field-height: 60px;
+  --form-input-field-height: 52px;
   max-width: 390px;
   margin-inline-start: auto;
   margin-inline-end: auto;
@@ -11263,7 +11263,7 @@ shopify-payment-terms {
 
 @media screen and (min-width: 741px) {
   .main-search__form {
-    --form-input-field-height: 80px;
+    --form-input-field-height: 52px;
   }
 
   .main-search__submit:not(:lang(ae), :lang(ar), :lang(arc), :lang(bcc), :lang(bqi), :lang(ckb), :lang(dv), :lang(fa), :lang(glk), :lang(he), :lang(ku), :lang(mzn), :lang(nqo), :lang(pnb), :lang(ps), :lang(sd), :lang(ug), :lang(ur), :lang(yi)) {
