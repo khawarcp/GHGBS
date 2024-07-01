@@ -212,6 +212,39 @@ $('.tabs-nav a').on('mouseover', function (event) {
     $($(this).attr('href')).show();
 });
 
+// ,,,,,
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Select all tab links
+    const tabLinks = document.querySelectorAll('.tabs-nav a');
+
+    // Add click event listener to each tab link
+    tabLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+
+            // Remove 'tab-active' class from all tab items
+            document.querySelectorAll('.tabs-nav li').forEach(item => {
+                item.classList.remove('tab-active');
+            }); 
+
+            // Add 'tab-active' class to the clicked tab item
+            this.parentElement.classList.add('tab-active');
+
+            // Hide all tab content items
+            document.querySelectorAll('.tabs-stage > div').forEach(tabContent => {
+                tabContent.style.display = 'none';
+            });
+
+            // Display the corresponding tab content
+            const tabId = this.getAttribute('href').substring(1);
+            document.getElementById(tabId).style.display = 'block';
+        });
+    });
+});
+
+
 // Shop Product Tabbing
 
 const tabButtons = document.querySelectorAll('.tab-btn')
