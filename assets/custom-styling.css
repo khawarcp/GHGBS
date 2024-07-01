@@ -71,6 +71,7 @@ predictive-search-drawer#search-drawer {
 
 .blog-detail-content img {
     margin-bottom: 16px;
+    border-radius: 12px;
 }
 
 .article_content {
@@ -173,10 +174,43 @@ predictive-search-drawer#search-drawer {
     border-radius: 16px;
 }
 
+store-header.header.header--bordered.header--transparent .header__logo-image {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(14%) hue-rotate(212deg) brightness(104%) contrast(104%);
+}
+
+.brand-title, .banner-hed h1, .banner-hed h2, .banner-cntnt p {
+    color: #fff;
+}
+
+.banner-btn .btn-primary {
+    border: 1px solid #d75140;
+}
+
+.banner-btn .btn-primary:hover p {
+    color: white;
+}
+
+.banner-btn .btn-primary:hover img {
+   filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(138deg) brightness(103%) contrast(101%);
+}
+
+.header--bordered:not(.header--transparent){
+  margin-top: -1px;
+}
+
+.checkbox-container {
+    gap: 10px;
+    align-items: center;
+}
+
+.checkbox-container input {
+    cursor: pointer;
+    accent-color: black;
+    height: 20px;
+    width: 20px;
+}
+
 @media screen and (min-width: 1200px) {
-    /* store-header .container {
-        padding: 0;
-    } */
     .header__secondary-links {
         max-width: max-content;
     }
@@ -192,16 +226,13 @@ predictive-search-drawer#search-drawer {
     product-facet.product-facet {
     margin-top: 60px;
   }
-    .product-facet__meta-bar {
-    display: none;
-}
+  
     facet-filters#facet-filters {
     padding: 20px;
 }
 
 header.drawer__header {
     border-bottom: none;
-     /* 125% */
 }
 
 header.drawer__header p {
@@ -211,11 +242,34 @@ header.drawer__header p {
     font-size: 22px;
     font-style: normal;
     font-weight: 600;
-    line-height: 40px; /* 125% */
+    line-height: 40px; 
+}
+.checkbox-container input {
+    height: 17px;
+    width: 17px;
+}
+
+.checkbox-container {
+    gap: 7px;
 }
   
 }
 @media screen and (max-width: 667px) {
+
+    .checkbox-container input {
+        height: 15px;
+        width: 15px;
+    }
+    
+    .checkbox-container {
+        gap: 5px;
+    }
+
+    .product-facet__meta-bar-item .popover-container {
+        padding: unset;
+        height: unset;
+    }
+
     .grinder-opt {
         margin-top: 20px;
     }

@@ -39,7 +39,7 @@
           "settings": {
             "menu_item": "Shop",
             "images_position": "right",
-            "image_1": "shopify:\/\/shop_images\/mega-menu-color-logo-h292px.svg",
+            "image_1": "shopify:\/\/shop_images\/header-logo_16ea8d37-f48f-4f37-88ed-02082a8c06f9.svg",
             "image_1_heading": "",
             "image_1_text": "",
             "image_1_link": "",
@@ -66,10 +66,10 @@
       ],
       "settings": {
         "enable_sticky_header": true,
-        "logo": "shopify:\/\/shop_images\/header-logo.svg",
+        "logo": "shopify:\/\/shop_images\/header-logo_16ea8d37-f48f-4f37-88ed-02082a8c06f9.svg",
         "logo_max_width": 265,
         "mobile_logo_max_width": 150,
-        "other_logo": "shopify:\/\/shop_images\/Logo.png",
+        "other_logo": "shopify:\/\/shop_images\/Logo_2.png",
         "other_logo_max_width": 120,
         "other_mobile_logo_max_width": 85,
         "navigation_menu": "main-menu",

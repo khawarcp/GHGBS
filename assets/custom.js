@@ -249,12 +249,12 @@ jQuery(document).ready(function() {
     var totalSlides = jQuery("#total-slides");
 
     owl.owlCarousel({
-        autoplay: true,
-        rewind: true, // use rewind if you don't want loop
+        autoplay: false,
+        rewind: false, // use rewind if you don't want loop
         responsiveClass: true,
-        autoHeight: true,
-        autoplayTimeout: 7000,
-        smartSpeed: 800,
+        // autoHeight: true,
+        // autoplayTimeout: 7000,
+        // smartSpeed: 800,
         nav: true,
         navText: [
             '<span class="slickPrev slide-arrow prev-arrow"><img src="https://cdn.shopify.com/s/files/1/0576/3999/3526/files/left-arrow.svg" alt="arrow"></span>',

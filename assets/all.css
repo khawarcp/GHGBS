@@ -1098,8 +1098,9 @@ section.parts {
 section.happy {
     margin-top: 100px;
     margin-right: 60px;
-    /* background: #f2f4f7; */
     padding-right: 30px;
+    background-color: #f2f4f7;
+    border-radius: 0px 20px 20px 0px;
 }
 
 .happy-img {
@@ -1985,11 +1986,13 @@ img.cnntctus-abs {
     resize: none;
     opacity: 0.7;
     height: 56px;
+  background: #fff;
 }
 
 .inqury-type select {
     -webkit-appearance: none;
     -moz-appearance: none;
+    appearance: none;
     position: relative;
 }
 
@@ -2611,9 +2614,9 @@ span#total-slides {
 .header--transparent .header__icon-list a svg {
     filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(17deg) brightness(102%) contrast(104%);
 }
-.header--transparent .header__icon-list a:nth-child(3) svg {
+/* .header--transparent .header__icon-list a:nth-child(3) svg {
     filter: none !important;
-}
+} */
 span.mega-menu__title {
     color: #343534;
     font-family: "URW DIN";
@@ -2648,7 +2651,7 @@ tabs-nav.tabs-nav.tabs-nav--center.tabs-nav--edge2edge {
     padding-left: 24px;
 }
 .notHasElement .product-item__image-wrapper {
-    min-height: 404px !important;
+    min-height: 344px !important;
 }
 .product-item-meta__title {
     color: var(--263542, #263542);
@@ -2677,7 +2680,7 @@ tabs-nav.tabs-nav.tabs-nav--center.tabs-nav--edge2edge {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 14px 24px;
+    padding: 14px 24px !important;
     color: var(--FFFFFF, #FFF);
     text-align: center;
     font-family: Univers;
@@ -2858,12 +2861,13 @@ form.cart__recap {
     background: transparent !important;
 }
 .cart-notification__text-wrapper a {
-    color: #fff;
+  color: #fff;
+  margin-right: 30px;
 }
+    .cart-notification__heading {
+        font-family: 'Univers';
+    }
 
-.cart-notification__overflow {
-    max-width: max-content;
-}
 .other-pages ul.header__linklist.list--unstyled.hidden-pocket.hidden-lap {
     padding: 0px !important;
 }
@@ -2941,7 +2945,7 @@ button.wishlisthero-product-in-wishlist {
 
 .product-meta h1 {
     color: var(--263542, #263542);
-    "URW DIN";
+    font-family:  "URW DIN";
     font-size: 40px;
     font-style: normal;
     font-weight: 600;
@@ -2957,6 +2961,12 @@ button.wishlisthero-product-in-wishlist {
     font-style: normal;
     font-weight: 600;
     line-height: 28px; /* 140% */
+  opacity:1;
+}
+.rating__caption{
+     color: var(--263542, #263542);
+    font-family: "URW DIN";
+    font-size: 16px;
 }
 
 .product-form__description p:first-child {
@@ -2991,7 +3001,7 @@ button.wishlisthero-product-in-wishlist {
     border: 1px solid #F1F1F1;
     display: flex;
     width: 100%;
-    max-width: 30%;
+    max-width: 276px;
     justify-content: space-between;
     align-items: center;
     padding: 6px;
@@ -3018,7 +3028,6 @@ button.wishlisthero-product-in-wishlist {
 .quantity-selector__button:hover {
     border-radius: 32px;
     background: #000;
-    color: #fff;
 }
 .product-form__payment-container #AddToCart {
     border-radius: 58px;
@@ -3183,8 +3192,8 @@ span.product-facet__sort-by-title {
     font-style: normal !important;
     font-weight: 700 !important;
     line-height: normal !important;
-    padding: 0 !important;
-    margin-bottom: 24px !important;
+    /* padding: 0 !important; */
+    margin-bottom: 0px !important;
 }
 .input-prefix span, .input-prefix input {
     color: #000;
@@ -3227,3 +3236,265 @@ span.price-range__delimiter.text--small {
 .pagination__nav-item.heading.heading--small:first-child {
     padding: 0;
 }
+
+/* ar css */
+li.header__linklist-item.has-dropdown .header__linklist-link {
+    position: relative;
+    margin-right: 15px;
+}
+
+li.header__linklist-item.has-dropdown .header__linklist-link::before {
+    content: "";
+    position: absolute;
+    right: -15px;
+    background: url(https://cdn.shopify.com/s/files/1/0576/3999/3526/files/Vector_3.svg?v=1719312386);
+    width: 8px;
+    height: 6px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  filter: invert(1);
+}  
+.header--transparent li.header__linklist-item.has-dropdown .header__linklist-link::before {
+    filter: none;
+}
+.wishlisthero-floating:hover {
+    background-color: transparent !important;
+}
+ a.header__icon-wrapper.tap-area.hidden-phone svg {
+    filter: invert(1);
+}
+
+.header--transparent .header__icon-list a:nth-child(3) svg {
+    filter: none !important;
+}
+.header__icon-list {
+    margin: 0px !important;
+}
+
+.other-pages .header {
+    display: flex;
+    align-items: center;
+}
+ul.header__linklist.list--unstyled.hidden-pocket.hidden-lap, .header__icon-list {
+    margin: 0px !important;
+}  
+/* .button.button--primary.shop-cart:hover {
+    background: #263542 !important;
+    border: #263542 !important;
+} */
+p.drawer__title.heading.h6 {
+    font-family: 'URW DIN';
+}
+
+.drawer__content.drawer__content--center p {
+    font-family: 'Univers';
+}
+
+.drawer__content.drawer__content--center a {
+    font-family: 'Univers';
+}
+a.line-item__remove-button.link.text--subdued.text--xsmall.hidden-phone {
+    font-family: 'Univers';
+}
+a.line-item__remove-button.link.text--subdued.text--xxsmall {
+    font-family: 'URW DIN';
+}
+button.checkout-button.button.button--primary.button--full {
+    font-family: 'Univers';
+}
+.cart {
+    font-family: 'Univers' !important;
+}
+
+.cart p {
+    font-family: 'Univers' !important;
+}
+
+.cart span {
+    font-family: 'URW DIN' !important;
+}
+
+.cart h1 , .cart h2 , .cart h3 , .cart h4 , .cart h5 {
+    font-family: 'URW DIN' !important;
+}
+h2.heading.h4 {
+    font-family: 'URW DIN';
+}
+h1.heading.h2 {
+    font-family: 'URW DIN';
+}
+
+span.shipping-bar__text {
+    font-family: 'Univers';
+}
+.quantity-selector__button {
+    background-color: transparent !important;
+}
+ .quantity-selector.quantity-selector--small {
+    width: 150px !important;
+   max-width: 150px !important;
+}
+.drawer__content {
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: transparent transparent; /* For Firefox */
+}
+
+.drawer__content::-webkit-scrollbar {
+    width: 2px; /* For WebKit browsers */
+}
+
+.drawer__content::-webkit-scrollbar-thumb {
+    background-color: transparent; /* For WebKit browsers */
+}
+
+.drawer__content::-webkit-scrollbar-track {
+    background-color: transparent; /* For WebKit browsers */
+}
+openable-element#mini-cart-note {
+    padding: 20px;
+}
+button.form__submit.form__submit--closer.button.button--secondary {
+    border-radius: 58px;
+    background: var(--D75140, #D75140);
+    color: var(--FFFFFF, #FFF);
+    text-align: center;
+    font-family: Univers;
+    font-size: 14px;
+    font-style: normal;
+}
+.MuiGrid-root.wishlist-hero-list-card {
+   border: 1px solid rgba(138,139,138,.26);
+   margin:0px 10px;
+   box-shadow: none !important;
+   border-radius: 10px;
+}
+
+.MuiPaper-elevation1 {
+    box-shadow: none !important;
+}
+button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.MuiButtonGroup-grouped.MuiButtonGroup-groupedHorizontal.MuiButtonGroup-groupedOutlined.MuiButtonGroup-groupedOutlinedHorizontal.MuiButtonGroup-groupedOutlined.wishlist-hero-list-card-footer-add-to-cart.MuiButton-containedPrimary.MuiButton-fullWidth {
+    background-color: #d75140 !important;
+    color: #fff;
+    font-family: 'Univers' !important;
+} 
+span.header__logo {
+    position: relative;
+    top: 22px;
+}
+.drawer[open] {
+    padding: 0px 20px;
+}
+a.button.button--primary {
+    font-family: 'Univers';
+}
+.header__icon-list a {
+    display: flex;
+}
+/* section.brand {
+    max-width: 1680px;
+    margin-left: auto;
+    margin-right: auto;
+} */
+a.brand-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.product-facet__filter-item {
+    padding: 0px 20px !important;
+}
+.collapsible__content {
+    padding-bottom: 20px;
+}
+facet-filters#facet-filters {
+    z-index: 999;
+}
+.cart-notification__overflow {
+    border-radius: 0px !important;
+}
+.color-swatch-list {
+    margin-left: 10px;
+}
+p.mini-cart__recommendations-heading.heading.heading--small.hidden-pocket {
+    font-family: 'URW DIN';
+    text-align: center;
+}
+h5.MuiTypography-root.wishlist-hero-header-title.wishlist-hero-dyna-translate.MuiTypography-h5 {
+    font-family: 'URW DIN' !important;
+}
+a.line-item__remove-button.link.text--subdued.text--xxsmall {
+    font-size: 14px;
+    padding-top: 10px;
+    display: block;
+}
+h5.MuiTypography-root.MuiTypography-h5 {
+    font-family: 'URW DIN' !important;
+}
+
+h6.MuiTypography-root.wishlist-hero-share-txt-icons.MuiTypography-h6 {
+    font-family: 'URW DIN' !important;
+}
+
+h6.MuiTypography-root.wishlist-hero-share-txt-link.MuiTypography-h6 {
+    font-family: 'Univers' !important;
+}
+
+span.MuiButton-label {
+     font-family: 'Univers' !important;
+}
+
+input#outlined-disabled {
+     font-family: 'Univers' !important;
+}
+a.MuiTypography-root.MuiLink-root.MuiLink-underlineHover.wishlist-hero-list-card-header-product-name.MuiTypography-colorTextPrimary {
+    font-family: 'URW DIN' !important;
+    text-decoration: auto !important;
+}
+
+span.wishlist-hero-list-card-header-added-on {
+    font-family: 'Univers' !important;
+}
+
+span.money.conversion-bear-money {
+    font-family: 'Univers' !important;
+}
+
+span.MuiTypography-root.MuiCardHeader-title.MuiTypography-body1.MuiTypography-displayBlock {
+    font-family: 'URW DIN' !important;
+}
+.jss27.wishlist-hero-share-icons {
+    display: flex;
+    align-items: center;
+}
+
+.page-header__text-wrapper.container {padding-top: 50px;padding-bottom: 50px;}
+
+form.main-search__form {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+h3.drawer__title.heading.h6 {
+    font-family: 'URW DIN' !important;
+}
+
+p.form__info {
+    font-family: 'Univers';
+}
+.input-row input {
+    font-family: 'Univers';
+}
+
+label.text--subdued {
+    font-family: 'Univers';
+}
+
+button.form__submit.button.button--primary.button--full {
+    font-family: 'Univers' !important;
+}
+
+
