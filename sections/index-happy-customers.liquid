@@ -15,7 +15,7 @@
                     {% case block.type %}
                            {% when 'block' %}
                                 {% if block.settings.comment != blank %} 
-                                    <div class="item">
+                                    <div class="item" data-testimonails="{{ forloop.index }}" {{ block.shopify_attributes }}>
                                         <div class="happy-cstmr-text">
                                             <h3> {{ block.settings.heading }} </h3>
                                                 {{ block.settings.comment }}
