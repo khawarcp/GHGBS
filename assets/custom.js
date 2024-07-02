@@ -275,19 +275,16 @@ function tabClicked(tab) {
 }
 
 // Happy Customer Slider
-
 jQuery(document).ready(function() {
     var owl = jQuery("#customercarousel");
     var currentSlide = jQuery("#current-slide");
     var totalSlides = jQuery("#total-slides");
 
     owl.owlCarousel({
-        autoplay: false,
+        autoplay: false, 
         rewind: false, // use rewind if you don't want loop
         responsiveClass: true,
-        // autoHeight: true,
-        // autoplayTimeout: 7000,
-        // smartSpeed: 800,
+        loop: true,
         nav: true,
         navText: [
             '<span class="slickPrev slide-arrow prev-arrow"><img src="https://cdn.shopify.com/s/files/1/0576/3999/3526/files/left-arrow.svg" alt="arrow"></span>',
@@ -308,7 +305,8 @@ jQuery(document).ready(function() {
             }
         },
         onInitialized: updateCounter,
-        onTranslated: updateCounter
+        onTranslated: updateCounter,
+        onDragged: updateCounter // Ensure counter updates on drag
     });
 
     function updateCounter(event) {
@@ -316,10 +314,10 @@ jQuery(document).ready(function() {
         var itemCount = event.item.count;
         totalSlides.text(itemCount);
 
-        // Current item index (note: event.item.index starts from 0)
-        var currentIndex = event.item.index + 1;
+        // Current item index
+        var currentIndex = (event.item.index - event.relatedTarget._clones.length / 2 % itemCount + itemCount) % itemCount + 1;
         currentSlide.text(currentIndex);
-    }
+    } 
 });
 
 

@@ -3496,5 +3496,11 @@ label.text--subdued {
 button.form__submit.button.button--primary.button--full {
     font-family: 'Univers' !important;
 }
+.MuiGrid-root.MuiGrid-container.MuiGrid-spacing-xs-2.MuiGrid-align-items-xs-flex-start {
+    gap: 20px 0px;
+}
+    .features--image-zoom .image-zoom:hover img {
+        transform: scale(1) !important;
+    }
 
 
